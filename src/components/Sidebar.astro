@@ -1,0 +1,228 @@
+---
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+interface NavSection {
+  title: string;
+  items: NavItem[];
+}
+
+const currentPath = Astro.url.pathname;
+
+const navigation: NavSection[] = [
+  {
+    title: "Getting Started",
+    items: [
+      { label: "Overview", href: "/" },
+      { label: "Installation", href: "/docs/installation" },
+      { label: "Quick Start", href: "/docs/quickstart" },
+    ],
+  },
+  {
+    title: "Core Features",
+    items: [
+      { label: "Code Completion", href: "/docs/completion" },
+      { label: "Inline Chat", href: "/docs/inline-chat" },
+      { label: "Code Suggestions", href: "/docs/suggestions" },
+    ],
+  },
+  {
+    title: "Advanced",
+    items: [
+      { label: "Custom Instructions", href: "/docs/custom-instructions" },
+      { label: "Workspace Context", href: "/docs/workspace-context" },
+      { label: "Agent Mode", href: "/docs/agent-mode" },
+    ],
+  },
+  {
+    title: "Resources",
+    items: [
+      { label: "Samples", href: "/samples" },
+      { label: "Presentations", href: "/presentations" },
+      { label: "Videos", href: "/videos" },
+      { label: "Documentation", href: "/docs" },
+    ],
+  },
+];
+
+function isActive(href: string): boolean {
+  if (href === "/") return currentPath === "/";
+  return currentPath.startsWith(href);
+}
+---
+
+<!-- Mobile Toggle Button -->
+<button
+  id="sidebar-toggle"
+  class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-bg-surface border border-border-default lg:hidden hover:border-accent-cyan transition-colors"
+  aria-label="Toggle navigation"
+  aria-expanded="false"
+>
+  <svg
+    id="menu-icon"
+    class="w-6 h-6 text-text-primary"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
+  <svg
+    id="close-icon"
+    class="w-6 h-6 text-text-primary hidden"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M6 18L18 6M6 6l12 12"></path>
+  </svg>
+</button>
+
+<!-- Sidebar Overlay (mobile) -->
+<div
+  id="sidebar-overlay"
+  class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"
+></div>
+
+<!-- Sidebar Navigation -->
+<aside
+  id="sidebar"
+  class="fixed top-0 left-0 z-40 h-screen w-72 bg-bg-surface border-r border-border-default transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto"
+>
+  <!-- Logo/Brand -->
+  <div class="p-6 border-b border-border-default">
+    <a href="/" class="flex items-center gap-3 group">
+      <div
+        class="w-10 h-10 rounded-lg bg-accent-cyan/10 flex items-center justify-center group-hover:bg-accent-cyan/20 transition-colors"
+      >
+        <svg
+          class="w-6 h-6 text-accent-cyan"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+        </svg>
+      </div>
+      <div>
+        <span class="font-heading font-semibold text-text-primary block"
+          >Copilot Guide</span
+        >
+        <span class="text-xs text-text-muted">Visual Studio</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation Sections -->
+  <nav class="p-4 space-y-6">
+    {
+      navigation.map((section) => (
+        <div class="space-y-2">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-text-muted px-3">
+            {section.title}
+          </h3>
+          <ul class="space-y-1">
+            {section.items.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class:list={[
+                    "flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-all duration-200",
+                    isActive(item.href)
+                      ? "bg-accent-cyan/10 text-accent-cyan font-medium border-l-2 border-accent-cyan"
+                      : "text-text-secondary hover:text-text-primary hover:bg-bg-overlay",
+                  ]}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </nav>
+
+  <!-- Footer -->
+  <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-border-default bg-bg-surface">
+    <a
+      href="https://github.com/htekdev"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-2 px-3 py-2 text-sm text-text-muted hover:text-accent-cyan transition-colors"
+    >
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <span>@htekdev</span>
+    </a>
+  </div>
+</aside>
+
+<script>
+  const toggle = document.getElementById("sidebar-toggle");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("sidebar-overlay");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  function openSidebar() {
+    sidebar?.classList.remove("-translate-x-full");
+    overlay?.classList.remove("hidden");
+    menuIcon?.classList.add("hidden");
+    closeIcon?.classList.remove("hidden");
+    toggle?.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeSidebar() {
+    sidebar?.classList.add("-translate-x-full");
+    overlay?.classList.add("hidden");
+    menuIcon?.classList.remove("hidden");
+    closeIcon?.classList.add("hidden");
+    toggle?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    if (isOpen) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  overlay?.addEventListener("click", closeSidebar);
+
+  // Close on escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeSidebar();
+    }
+  });
+
+  // Close on window resize to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) {
+      closeSidebar();
+    }
+  });
+</script>

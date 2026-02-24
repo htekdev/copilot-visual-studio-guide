@@ -1,0 +1,160 @@
+---
+title: "Next Edit Suggestions"
+description: "Learn how Next Edit Suggestions (NES) predicts and applies related code changes across your file based on your recent edits."
+order: 2
+section: "Features"
+---
+
+## What Is Next Edit Suggestions?
+
+**Next Edit Suggestions (NES)** is a GitHub Copilot feature that uses your recent edits to anticipate the next edit you might want to make—and where that edit should occur. Unlike traditional completions that only suggest code at your cursor position, NES can suggest edits anywhere in your file, predicting insertions, deletions, or mixed changes.
+
+Copilot traditionally looks at the current snapshot of your code to suggest completions. NES expands this by analyzing the **history of edits** you've made to predict what comes next. This provides more context for better suggestions since it considers a sequence of changes rather than just a point-in-time snapshot.
+
+> "You make a change and then Copilot predicts the changes that follow and presents them to you in sequence."
+> — GitHub Next
+
+## Prerequisites
+
+- **Visual Studio 2022 version 17.14** or later (latest servicing release recommended)
+- GitHub account with Copilot access (paid subscription or Copilot Free plan)
+
+## How to Enable NES
+
+Navigate to **Tools > Options > GitHub > Copilot > Copilot Completions** and enable **Next Edit Suggestions**.
+
+In newer versions of Visual Studio, you can also find this under:
+
+**Tools > Options > All Settings > Text Editor > Code Completions > General** → Select "Copilot Next Edit Suggestions (Next-edit predictions from Copilot)" in Code Completions Providers.
+
+## Using NES
+
+### Basic Workflow
+
+1. **Start coding** — NES activates as you make edits
+2. **Arrow indicator appears** — An arrow in the gutter shows when an edit suggestion is available
+3. **Press Tab to navigate** — Jump to the suggested edit location
+4. **Press Tab again to accept** — Apply the suggested change
+
+### Visual Indicators
+
+- **Right arrow (→)**: Edit suggestion is on a line below or to the right
+- **Down arrow (↓)**: Edit suggestion is below the current editor view
+- **Up arrow (↑)**: Edit suggestion is above your current position
+
+### Diff View Display
+
+When NES suggests a change, it displays in a diff view:
+- **Red highlighting**: Original code to be replaced/removed
+- **Green highlighting**: New code suggested by Copilot
+
+## Display Modes
+
+### Expanded Mode (Default)
+
+Suggestions appear automatically as ghost text when available. The full suggestion is visible inline.
+
+### Collapse Mode
+
+Enable via: **Tools > Options > GitHub > Copilot > Copilot Completions > Collapse Next Edit Suggestions**
+
+In Collapse Mode:
+- Only the margin indicator (arrow) appears when suggestions are available
+- The suggestion text remains hidden until you choose to view it
+- Press **Tab** or click the arrow to reveal the suggestion
+- After accepting a suggestion, related suggestions appear automatically
+- Unrelated new suggestions remain collapsed
+
+**Benefits of Collapse Mode:**
+- Less visual distraction
+- Review suggestions only when ready
+- Maintains cleaner editor view during focused coding
+
+### Manual Invocation Mode
+
+For even more control, navigate to **Tools > Options > All Settings > Inline Suggestions > General** and set "Inline Suggestions Invocation" to **Manual**.
+
+Manually trigger suggestions with:
+- **Alt + ,** (comma)
+- **Alt + .** (period)
+
+## Use Cases
+
+### Rename Cascades / Variable Refactoring
+
+When you rename a variable once, NES suggests updating it throughout the file. It also recognizes naming patterns and suggests updates to subsequent code to match.
+
+**Example:** Rename `userId` to `userIdentifier` → NES suggests updating all other occurrences.
+
+### Pattern Matching / Code Modernization
+
+NES recognizes when you're updating code patterns and suggests completing the transformation.
+
+**Example (C++ STL migration):**
+- You update `printf()` to `std::cout`
+- NES suggests updating related functions like `fgets()` to their modern equivalents
+
+### Refactoring Classes
+
+When refactoring a class (e.g., `Point` to `Point3D`), NES suggests all related changes:
+- Constructor updates
+- Method signature changes
+- Property additions
+- Usage site updates
+
+### Adding Fields/Parameters
+
+When adding a new field to a data class or parameter to a method:
+- NES suggests initializations
+- Updates constructors
+- Provides sensible default values at call sites
+
+### Catching Mistakes
+
+NES helps fix:
+- **Typos**: `bol` → `bool`
+- **Logic errors**: Inverted ternary expressions
+- **Operator mistakes**: `&&` should be `||`
+
+### Code Pasting Adjustments
+
+After pasting code, NES suggests adjustments to match the style of surrounding code.
+
+### New Variable Integration
+
+When you add a new variable, NES quickly suggests where and how to use it throughout your code.
+
+## Suggestions vs Completions
+
+| Feature | Completions | Next Edit Suggestions |
+|---------|-------------|----------------------|
+| Location | At cursor only | Anywhere in file |
+| Trigger | Typing new code | After making an edit |
+| Scope | Single completion | Series of related changes |
+| Type | Insertions only | Insertions, deletions, replacements |
+| Context | Current snapshot | Edit history |
+
+## Configuration Options
+
+| Setting | Location | Description |
+|---------|----------|-------------|
+| Enable NES | Tools > Options > GitHub > Copilot > Copilot Completions | Turn NES on/off |
+| Collapse Mode | Tools > Options > GitHub > Copilot > Copilot Completions | Hide suggestions until requested |
+| Manual Invocation | Tools > Options > Inline Suggestions > General | Require manual trigger for suggestions |
+
+## Keyboard Shortcuts
+
+| Action | Shortcut |
+|--------|----------|
+| Navigate to suggestion | Tab |
+| Accept suggestion | Tab (when on suggestion) |
+| Dismiss suggestion | Esc |
+| Manual trigger | Alt + , or Alt + . |
+
+## Best Practices
+
+1. **Let NES guide you** — Don't manually search for related edits; let the arrows lead
+2. **Use Tab repeatedly** — Quickly cycle through a series of related changes
+3. **Watch the gutter** — Arrows indicate direction to next edit
+4. **Enable Collapse Mode** for complex refactoring to reduce visual noise
+5. **Trust the diff view** — Red/green highlighting clearly shows what will change

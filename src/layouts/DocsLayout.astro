@@ -1,0 +1,148 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="flex min-h-screen">
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 fixed left-0 top-0 h-screen bg-bg-surface border-r border-border-default overflow-y-auto">
+      <div class="p-6">
+        <!-- Logo/Home Link -->
+        <a href="/" class="flex items-center gap-2 mb-8 group">
+          <svg class="w-8 h-8 text-accent-cyan" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.5 4.5h1v3h-1v-3zm0 12h1v3h-1v-3zm7.5-7h-3v1h3v-1zm-12 0h-3v1h3v-1zm9.182 5.682l-2.121-2.121.707-.707 2.121 2.121-.707.707zm-9.657-6.364l-2.121-2.121.707-.707 2.121 2.121-.707.707zm9.657 0l-.707-.707 2.121-2.121.707.707-2.121 2.121zm-9.657 6.364l-.707-.707 2.121-2.121.707.707-2.121 2.121z"/>
+          </svg>
+          <span class="font-heading font-bold text-lg text-text-primary group-hover:text-accent-cyan transition-colors">
+            Copilot Guide
+          </span>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="space-y-6">
+          <div>
+            <h3 class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-3">Getting Started</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/docs/introduction" class="nav-link">Introduction</a>
+              </li>
+              <li>
+                <a href="/docs/installation" class="nav-link">Installation</a>
+              </li>
+              <li>
+                <a href="/docs/configuration" class="nav-link">Configuration</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-3">Core Features</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/docs/code-completions" class="nav-link">Code Completions</a>
+              </li>
+              <li>
+                <a href="/docs/chat" class="nav-link">Copilot Chat</a>
+              </li>
+              <li>
+                <a href="/docs/inline-chat" class="nav-link">Inline Chat</a>
+              </li>
+              <li>
+                <a href="/docs/edits" class="nav-link">Copilot Edits</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-3">Advanced</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/docs/custom-instructions" class="nav-link">Custom Instructions</a>
+              </li>
+              <li>
+                <a href="/docs/mcp-servers" class="nav-link">MCP Servers</a>
+              </li>
+              <li>
+                <a href="/docs/agent-mode" class="nav-link">Agent Mode</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-3">Resources</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/presentations" class="nav-link">Presentations</a>
+              </li>
+              <li>
+                <a href="/docs/faq" class="nav-link">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 ml-64">
+      <div class="max-w-4xl mx-auto px-8 py-12">
+        <!-- Page Header -->
+        <header class="mb-10">
+          <h1 class="text-4xl font-heading font-bold text-text-primary mb-4">{title}</h1>
+          {description && (
+            <p class="text-lg text-text-secondary">{description}</p>
+          )}
+        </header>
+
+        <!-- Prose Content -->
+        <article class="prose prose-invert prose-lg max-w-none
+          prose-headings:font-heading prose-headings:text-text-primary prose-headings:font-bold
+          prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border-default prose-h2:pb-2
+          prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+          prose-p:text-text-secondary prose-p:leading-relaxed
+          prose-a:text-accent-cyan prose-a:no-underline hover:prose-a:underline
+          prose-strong:text-text-primary
+          prose-code:text-accent-violet prose-code:bg-bg-overlay prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
+          prose-pre:bg-bg-overlay prose-pre:border prose-pre:border-border-default prose-pre:rounded-lg
+          prose-ul:text-text-secondary prose-ol:text-text-secondary
+          prose-li:marker:text-accent-cyan
+          prose-blockquote:border-l-accent-cyan prose-blockquote:bg-bg-overlay prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg
+          prose-img:rounded-lg prose-img:border prose-img:border-border-default
+          prose-table:border prose-table:border-border-default
+          prose-th:bg-bg-overlay prose-th:text-text-primary prose-th:font-semibold prose-th:p-3
+          prose-td:border prose-td:border-border-default prose-td:p-3
+        ">
+          <slot />
+        </article>
+
+        <!-- Footer Navigation -->
+        <footer class="mt-16 pt-8 border-t border-border-default">
+          <div class="flex justify-between items-center text-sm text-text-muted">
+            <a href="/" class="hover:text-accent-cyan transition-colors">
+              ← Back to Home
+            </a>
+            <span>GitHub Copilot Visual Studio Guide</span>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .nav-link {
+    @apply block px-3 py-2 text-sm text-text-secondary rounded-md transition-all duration-200;
+    @apply hover:bg-bg-overlay hover:text-accent-cyan;
+  }
+
+  .nav-link[aria-current="page"],
+  .nav-link.active {
+    @apply bg-bg-overlay text-accent-cyan border-l-2 border-accent-cyan;
+  }
+</style>

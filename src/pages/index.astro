@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const features = [
+  {
+    icon: '⚡',
+    title: 'Code Completions',
+    description: 'Intelligent inline suggestions that understand your code context and coding patterns.',
+  },
+  {
+    icon: '💬',
+    title: 'Copilot Chat',
+    description: 'Ask questions, get explanations, and generate code through natural conversation.',
+  },
+  {
+    icon: '🤖',
+    title: 'Agent Mode',
+    description: 'Autonomous coding assistant that can plan and execute multi-step tasks.',
+  },
+  {
+    icon: '✏️',
+    title: 'Next Edit Suggestions',
+    description: 'Predictive edits that anticipate your next changes across your codebase.',
+  },
+  {
+    icon: '🔌',
+    title: 'MCP Integration',
+    description: 'Extend Copilot with custom tools and external services via Model Context Protocol.',
+  },
+];
+
+const quickLinks = [
+  {
+    icon: '📚',
+    title: 'Documentation',
+    description: 'In-depth guides and reference material',
+    href: '/docs/',
+  },
+  {
+    icon: '💻',
+    title: 'Code Samples',
+    description: 'Working examples and templates',
+    href: '/samples/',
+  },
+  {
+    icon: '🎯',
+    title: 'Presentations',
+    description: 'Slides and talk materials',
+    href: '/presentations/',
+  },
+  {
+    icon: '🎬',
+    title: 'Videos',
+    description: 'Tutorials and walkthroughs',
+    href: '/videos/',
+  },
+];
+---
+
+<BaseLayout title="GitHub Copilot Visual Studio Guide" description="Your comprehensive guide to mastering GitHub Copilot in Visual Studio">
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden px-4 py-24 md:py-32">
+      <!-- Background gradient -->
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-cyan/10 rounded-full blur-[128px]"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-violet/10 rounded-full blur-[128px]"></div>
+      </div>
+      
+      <div class="max-w-5xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6">
+          <span class="gradient-text">GitHub Copilot</span>
+          <br />
+          <span class="text-text-primary">in Visual Studio</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto">
+          Your comprehensive guide to AI-powered development
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/docs/"
+            class="px-8 py-3 bg-accent-cyan text-bg-void font-semibold rounded-lg hover:bg-accent-cyan/90 transition-colors"
+          >
+            Get Started
+          </a>
+          <a
+            href="https://github.com/htekdev/copilot-visual-studio-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-3 border border-border-default text-text-primary rounded-lg hover:border-accent-cyan hover:text-accent-cyan transition-colors"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Row -->
+    <section class="px-4 py-16 border-y border-border-muted">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="fade-in">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-accent-cyan mb-2">1M+</div>
+          <div class="text-text-secondary">Developers Using Copilot</div>
+        </div>
+        <div class="fade-in">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-accent-violet mb-2">55%</div>
+          <div class="text-text-secondary">Faster Task Completion</div>
+        </div>
+        <div class="fade-in">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-accent-rose mb-2">FREE</div>
+          <div class="text-text-secondary">Tier Available</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="px-4 py-24">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
+          <span class="gradient-text">Powerful Features</span>
+        </h2>
+        <p class="text-text-secondary text-center mb-12 max-w-2xl mx-auto">
+          Explore the capabilities that make GitHub Copilot your AI pair programmer
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature) => (
+            <div class="glass rounded-xl p-6 hover:border-accent-cyan/50 transition-colors fade-in">
+              <div class="text-4xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-heading font-semibold text-text-primary mb-2">
+                {feature.title}
+              </h3>
+              <p class="text-text-secondary">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="px-4 py-24 bg-bg-surface">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
+          <span class="gradient-text">Quick Links</span>
+        </h2>
+        <p class="text-text-secondary text-center mb-12">
+          Jump to the resources you need
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {quickLinks.map((link) => (
+            <a
+              href={link.href}
+              class="group block p-6 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all fade-in"
+            >
+              <div class="text-3xl mb-3">{link.icon}</div>
+              <h3 class="text-lg font-heading font-semibold text-text-primary group-hover:text-accent-cyan transition-colors mb-1">
+                {link.title}
+              </h3>
+              <p class="text-sm text-text-muted">{link.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-4 py-12 border-t border-border-muted">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h4 class="font-heading font-semibold text-text-primary mb-4">Official Resources</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://docs.github.com/en/copilot" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+                  GitHub Copilot Docs
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+                  GitHub Copilot
+                </a>
+              </li>
+              <li>
+                <a href="https://visualstudio.microsoft.com/" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+                  Visual Studio
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-heading font-semibold text-text-primary mb-4">Learn More</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://github.blog/ai-and-ml/github-copilot/" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+                  GitHub Blog - Copilot
+                </a>
+              </li>
+              <li>
+                <a href="https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-extension" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+                  Microsoft Learn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/copilot" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+                  Copilot Features
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-heading font-semibold text-text-primary mb-4">Community</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://github.com/htekdev" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+                  @htekdev on GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://htek.dev" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+                  htek.dev
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pt-8 border-t border-border-muted text-center text-text-muted text-sm">
+          <p>&copy; {new Date().getFullYear()} GitHub Copilot Visual Studio Guide. Built with Astro.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Simple fade-in on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  </script>
+</BaseLayout>

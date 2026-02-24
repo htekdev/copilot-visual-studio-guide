@@ -1,0 +1,323 @@
+---
+title: "Copilot Chat"
+description: "Master GitHub Copilot Chat in Visual Studio with Ask and Agent modes, slash commands, context references, and built-in agents for debugging, profiling, and modernization."
+order: 3
+section: "Features"
+---
+
+## Overview
+
+Copilot Chat provides a conversational AI interface directly in Visual Studio. You can ask questions about your code, get explanations, generate tests, fix bugs, and even let Copilot autonomously make changes across your entire codebase.
+
+Visual Studio 2022 version 17.14 introduced two distinct interaction modes—**Ask Mode** and **Agent Mode**—giving you precise control over how Copilot assists your workflow.
+
+## Ask Mode vs Agent Mode
+
+### Ask Mode
+
+Ask Mode is the **default conversational mode** for Q&A interactions:
+
+- Provides answers in the chat pane without making any code edits
+- **100% confidence** that no code changes occur unless you explicitly click **Apply** or copy/paste
+- Stops after a single response—you control when to continue
+- Best for conceptual questions, explanations, and generating code examples without applying them
+
+### Agent Mode
+
+Agent Mode is an **agentic AI experience** that operates autonomously:
+
+- Creates a plan, makes code edits, runs terminal commands, and applies changes across your codebase
+- **Iterates automatically**—monitors build results, test failures, and tool outputs, then refines steps until the goal is reached
+- Uses **MCP (Model Context Protocol)** capabilities for extended tool integrations
+- Requires confirmation before running terminal commands or using non-built-in tools
+- Available in VS 2022 17.14+ (enable via "Enable Agent mode in the chat pane" option)
+
+### When to Choose Each Mode
+
+| Scenario | Recommended Mode |
+|----------|------------------|
+| Quick code questions | Ask |
+| Explanations without changes | Ask |
+| Multi-file code edits | Agent |
+| Automated refactoring | Agent |
+| MCP tool integrations | Agent |
+| Build/test monitoring | Agent |
+
+## Slash Commands
+
+Slash commands provide quick, discoverable ways to set intent for common development tasks. They work in both the **chat window** and **inline chat**.
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `/explain` | Get code explanations | `/explain the AddItemToBasket method in BasketService.cs` |
+| `/fix` | Propose a fix for problems in selected code | `/fix the SetQuantities method in BasketService.cs` |
+| `/tests` | Create unit tests for selected code | `/tests using XUnit Framework` |
+| `/doc` | Add comments for specified or selected code | `/doc DeleteBasketAsync method` |
+| `/optimize` | Analyze and improve running time of selected code | `/optimize this LINQ query` |
+| `/generate` | Generate code to answer a specified question | `/generate code to add two numbers` |
+| `/help` | Get help on using Copilot Chat | `/help` |
+
+### Using Slash Commands
+
+1. **In Chat Window:** Type `/` followed by the command name
+2. **In Inline Chat:** Select code, press `Alt+/` (or right-click → Copilot → Inline Chat), then type the slash command
+3. **VS 2022 17.13+:** Commands expand to show natural language context as you type
+
+### Copilot Actions (Context Menu)
+
+Right-click selected code to access preconfigured prompts:
+
+| Action | With Code Selected | Without Code Selected |
+|--------|-------------------|----------------------|
+| Explain | Explains selected code | Explains code near cursor |
+| Optimize Selection | Optimizes for performance, maintainability, reliability | N/A |
+| Generate Comments | Generates comments for selection | Generates for code near cursor |
+| Generate Tests | Generates tests for selection | Generates for code near cursor |
+| Add to Chat | Adds selected code as reference | Adds entire file as reference |
+
+## Context References
+
+Context references let you scope Copilot's responses to specific parts of your codebase. Visual Studio automatically includes selected text and the current file, but you can add explicit references for more precise results.
+
+### File References with `#`
+
+Reference files by adding `#` before the filename:
+
+```
+#BasketService.cs
+#MyFile.cs:66-72    (specific line range)
+```
+
+### Symbol References with `#`
+
+Reference specific methods, classes, or functions (VS 2022 17.11+):
+
+```
+#BasketAddItem          (method)
+#BasketService          (class)
+#TestCalculator         (test method)
+```
+
+### Solution-Wide Reference with `@workspace`
+
+Use `@workspace` to reference the entire active solution:
+
+```
+@workspace where is the authentication logic?
+Is there a delete basket method in this @workspace
+```
+
+This leverages information about all files, projects, and configurations currently open in the IDE.
+
+### URL References
+
+Reference public URLs for additional context (VS 2022 17.12+):
+
+```
+Based on the README at https://github.com/example/repo, implement...
+```
+
+> **Note:** Only static HTML from public URLs is supported—no authentication or dynamic content.
+
+### Example Usage
+
+| Example | Context Used |
+|---------|--------------|
+| `What is the purpose of #MyFile.cs:66-72?` | Exact section of file |
+| `/explain the #AddItemToBasket in #BasketService.cs` | Specific method in specific file |
+| `Could you explain differences between #BasketService and #OrderService?` | Both classes |
+| `In my @workspace where is #AddItemToBasket?` | Full solution context |
+
+## Built-in @Agents
+
+Visual Studio ships with specialized **preset agents** that integrate deeply with IDE capabilities. Access them via the **agent picker** in the chat panel or by typing `@` in chat.
+
+### @Profiler
+
+**Purpose:** Performance testing and optimization
+
+- Analyze CPU usage, memory allocations, and runtime behavior
+- Surface performance bottlenecks
+- Generate and run BenchmarkDotNet benchmarks
+- Analyze .NET Counters for ASP.NET scenarios
+- Apply suggested optimizations and validate improvements
+
+```
+@Profiler Please evaluate the performance of this code
+@Profiler Help me optimize this LINQ query
+```
+
+### @Debugger
+
+**Purpose:** Intelligent debugging assistance
+
+- Uses call stacks, variable state, and diagnostic tools
+- Walks through error diagnosis systematically
+- Analyzes exceptions with repository context (Azure DevOps, GitHub)
+- Helps resolve unbound breakpoints automatically
+- Provides AI-enhanced exception analysis
+
+**Integration Points:**
+- Exception Helper with "Ask Copilot" button
+- Call Stack window with "Analyze with Copilot"
+- Data tips, Variables, LINQ queries
+- Conditional breakpoints and tracepoints
+
+```
+@Debugger Why is this exception occurring?
+@Debugger Analyze this call stack
+```
+
+### @Modernize
+
+**Purpose:** Framework and dependency upgrades (.NET and C++)
+
+- Upgrade projects to newer .NET versions
+- Migrate from .NET Framework to modern .NET
+- Assess code, configuration, and dependencies
+- Create detailed upgrade documentation (assessment.md, plan.md, tasks.md)
+- Execute upgrades with automatic fix attempts
+
+**Three-Stage Workflow:**
+1. **Assessment** — Examines project structure, dependencies, breaking changes
+2. **Planning** — Creates detailed specification for resolving issues
+3. **Execution** — Breaks plan into sequential tasks with validation
+
+```
+@modernize Upgrade this project to .NET 9
+@modernize Migrate this .NET Framework app to .NET 8
+```
+
+**Access:** Right-click solution/project → **Modernize**, or type `@modernize` in chat
+
+### @Test
+
+**Purpose:** Unit test generation
+
+- Generates unit tests tuned to your project's framework and patterns
+- Understands existing test patterns in your codebase
+- Produces tests that CI won't reject (not boilerplate)
+
+### @VS
+
+**Purpose:** IDE-specific assistance and commands
+
+- Helps with Visual Studio features and workflows
+- Provides guidance on IDE configuration and options
+- Assists with project/solution management
+
+### @Context
+
+**Purpose:** Context management and awareness
+
+- Helps manage and understand what context Copilot is using
+- Assists with scoping questions appropriately
+
+## Adding Context with the + Button
+
+The **+** button in the chat window lets you attach additional context to your prompts.
+
+### How to Add Attachments
+
+1. Click the **+** button in the chat input area
+2. Select from available options:
+   - **Files** — Add specific files from your solution
+   - **Images** — Attach screenshots, diagrams, or UI mockups
+   - **Solution** — Reference the entire solution (@workspace)
+
+### Image Attachments
+
+Visual Studio supports attaching images to provide visual context:
+- Screenshots of UI you want to modify
+- Error dialogs or messages
+- Design mockups for implementation
+- Diagrams explaining architecture
+
+**Example:** "Update my UI in App.tsx to resemble this image" [attached screenshot]
+
+### Best Practices
+
+1. **Be specific** — Add only relevant files rather than the entire solution when possible
+2. **Use threads** — Start new threads for different topics to keep context clean
+3. **Delete irrelevant history** — Remove prompts that didn't give desired results
+4. **Review References dropdown** — Check what context Copilot used after each response
+
+## Custom Instructions
+
+Automatically add prespecified context to all chat requests.
+
+### Repository-Level Instructions
+
+Create `.github/copilot-instructions.md` in your repository root:
+
+```markdown
+# Copilot Instructions
+
+- Use dependency injection patterns
+- Follow company naming conventions
+- Prefer async/await over synchronous code
+- Always include XML documentation comments
+```
+
+**Enable in Visual Studio:** Tools → Options → GitHub → Copilot → Enable custom instructions from `.github/copilot-instructions.md`
+
+### Scoped Instructions
+
+Create `.github/instructions/*.instructions.md` for specific file types:
+
+```yaml
+---
+applyTo: "**/*.cs"
+---
+Use nullable reference types.
+Prefer LINQ over foreach loops.
+```
+
+### Prompt Files
+
+Create reusable prompt templates in `.github/prompts/*.prompt.md`:
+
+```yaml
+---
+mode: agent
+tools:
+  - run_tests
+  - file_operations
+---
+Create comprehensive unit tests for the selected code using xUnit.
+Include edge cases and null checks.
+```
+
+## Quick Reference
+
+### Mode Selection
+- **Ask Mode:** Q&A, explanations, no automatic edits
+- **Agent Mode:** Autonomous, iterative, uses tools
+
+### Common Slash Commands
+```
+/explain    — Explain code
+/fix        — Fix problems
+/tests      — Generate tests
+/doc        — Add documentation
+/optimize   — Improve performance
+/generate   — Generate new code
+```
+
+### Context Shortcuts
+```
+#filename.cs        — Reference a file
+#MethodName         — Reference a symbol
+#file.cs:10-20      — Reference line range
+@workspace          — Entire solution
+```
+
+### Built-in Agents
+```
+@Profiler    — Performance analysis
+@Debugger    — Debug assistance
+@modernize   — Upgrade .NET apps
+@Test        — Generate unit tests
+@VS          — IDE help
+@Context     — Context management
+```

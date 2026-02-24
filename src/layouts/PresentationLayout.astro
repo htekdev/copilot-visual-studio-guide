@@ -1,0 +1,108 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title} description="GitHub Copilot presentations and resources">
+  <div class="min-h-screen">
+    <!-- Minimal Header -->
+    <header class="border-b border-border-default bg-bg-surface/80 backdrop-blur-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <svg class="w-8 h-8 text-accent-cyan" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.5 4.5h1v3h-1v-3zm0 12h1v3h-1v-3zm7.5-7h-3v1h3v-1zm-12 0h-3v1h3v-1zm9.182 5.682l-2.121-2.121.707-.707 2.121 2.121-.707.707zm-9.657-6.364l-2.121-2.121.707-.707 2.121 2.121-.707.707zm9.657 0l-.707-.707 2.121-2.121.707.707-2.121 2.121zm-9.657 6.364l-.707-.707 2.121-2.121.707.707-2.121 2.121z"/>
+          </svg>
+          <span class="font-heading font-bold text-lg text-text-primary group-hover:text-accent-cyan transition-colors">
+            Copilot Guide
+          </span>
+        </a>
+
+        <nav class="flex items-center gap-6">
+          <a href="/docs/introduction" class="text-text-secondary hover:text-accent-cyan transition-colors text-sm">
+            Documentation
+          </a>
+          <a href="/presentations" class="text-accent-cyan text-sm font-medium">
+            Presentations
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+      <!-- Page Title -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-heading font-bold text-text-primary mb-4 gradient-text">
+          {title}
+        </h1>
+        <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+          Slide decks, demos, and training materials for GitHub Copilot in Visual Studio
+        </p>
+      </div>
+
+      <!-- Presentation Grid Container -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <slot />
+      </div>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="border-t border-border-default mt-16">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-text-muted text-sm">
+          GitHub Copilot Visual Studio Guide
+        </p>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="/" class="text-text-secondary hover:text-accent-cyan transition-colors">
+            Home
+          </a>
+          <a href="/docs/introduction" class="text-text-secondary hover:text-accent-cyan transition-colors">
+            Docs
+          </a>
+          <a href="https://github.com/htekdev" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-cyan transition-colors">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  /* Presentation card styles for slotted content */
+  :global(.presentation-card) {
+    @apply glass rounded-xl overflow-hidden transition-all duration-300;
+    @apply hover:border-accent-cyan hover:shadow-lg hover:shadow-accent-cyan/10;
+    @apply hover:-translate-y-1;
+  }
+
+  :global(.presentation-card-image) {
+    @apply aspect-video bg-bg-overlay flex items-center justify-center;
+    @apply border-b border-border-default;
+  }
+
+  :global(.presentation-card-content) {
+    @apply p-5;
+  }
+
+  :global(.presentation-card-title) {
+    @apply font-heading font-semibold text-lg text-text-primary mb-2;
+  }
+
+  :global(.presentation-card-description) {
+    @apply text-text-secondary text-sm mb-4 line-clamp-2;
+  }
+
+  :global(.presentation-card-meta) {
+    @apply flex items-center justify-between text-xs text-text-muted;
+  }
+
+  :global(.presentation-card-tag) {
+    @apply px-2 py-1 bg-bg-overlay rounded text-accent-violet;
+  }
+</style>

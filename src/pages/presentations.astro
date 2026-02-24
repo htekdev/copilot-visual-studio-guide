@@ -1,0 +1,86 @@
+---
+const presentations = [
+  {
+    title: 'Introduction to GitHub Copilot in Visual Studio',
+    description: '11-slide overview covering all major features, keyboard shortcuts, and demo talking points',
+    path: '/copilot-visual-studio-guide/presentations/intro.html',
+    slides: 11,
+    icon: '🎯'
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentations | Copilot Visual Studio Guide</title>
+  <style>
+    :root {
+      --bg-primary: #0A0A0F;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --accent-cyan: #00E5FF;
+      --accent-purple: #7C3AED;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 4rem 2rem;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { text-align: center; color: var(--text-secondary); margin-bottom: 3rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    .card:hover { border-color: var(--accent-cyan); transform: translateY(-4px); }
+    .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .card h2 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--accent-cyan); }
+    .card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem; }
+    .meta { font-size: 0.85rem; color: var(--text-secondary); }
+    a { text-decoration: none; color: inherit; }
+    .back { display: block; text-align: center; margin-top: 3rem; color: var(--accent-cyan); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Presentations</h1>
+  <p class="subtitle">Slideshow presentations for customer demos and training</p>
+  <div class="grid">
+    {presentations.map(p => (
+      <a href={p.path} target="_blank" class="card">
+        <div class="icon">{p.icon}</div>
+        <h2>{p.title}</h2>
+        <p>{p.description}</p>
+        <div class="meta">{p.slides} slides • Click to launch</div>
+      </a>
+    ))}
+  </div>
+  <a href="/" class="back">← Back to Home</a>
+</body>
+</html>

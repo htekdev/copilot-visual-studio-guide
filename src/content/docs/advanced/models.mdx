@@ -1,0 +1,163 @@
+---
+title: "Model Selection"
+description: "Choose the right AI model for your coding tasks. Learn about GPT, Claude, and Gemini models available in GitHub Copilot for Visual Studio."
+order: 3
+section: "Advanced"
+---
+
+# Model Selection
+
+GitHub Copilot supports multiple AI models from OpenAI, Anthropic, Google, xAI, and others. You can switch models via the **model picker** in Visual Studio to optimize for different tasks—whether you need fast completions, deep reasoning, or agentic workflows.
+
+## Available Models
+
+### OpenAI Models
+
+| Model | Best For | Availability |
+|-------|----------|--------------|
+| **GPT-4.1** | Fast, accurate completions; default for code completion | All plans |
+| **GPT-5 mini** | Fast responses, multimodal support, debugging | All plans |
+| **GPT-5.1** | Multi-step problem solving, architecture analysis | Pro, Pro+, Business, Enterprise |
+| **GPT-5.1-Codex** | Complex engineering tasks (features, tests, debugging, refactors) | Pro, Pro+, Business, Enterprise |
+| **GPT-5.1-Codex-Max** | Agentic tasks, autonomous coding workflows | Pro+ |
+| **GPT-5.1-Codex-Mini** | Lightweight reasoning with lower resource usage | All plans |
+| **GPT-5.2** | Complex reasoning, code analysis, technical decisions | All plans |
+| **GPT-5.2-Codex** | Agentic tasks, coding agent workflows | Pro, Pro+, Business, Enterprise |
+
+### Anthropic Claude Models
+
+| Model | Best For | Availability |
+|-------|----------|--------------|
+| **Claude Haiku 4.5** | Quick answers to lightweight coding questions | All plans |
+| **Claude Sonnet 4.0** | Balanced performance for coding workflows | All plans |
+| **Claude Sonnet 4.5** | Complex problem-solving, sophisticated reasoning, agent tasks | All plans |
+| **Claude Opus 4.5** | Complex problem-solving, sophisticated reasoning | Pro+, Enterprise |
+| **Claude Opus 4.6** | Anthropic's most powerful model | Pro+, Enterprise |
+| **Claude Opus 4.6 (fast mode)** | Faster Opus with same capabilities (preview) | Pro+ |
+
+### Google Gemini Models
+
+| Model | Best For | Availability |
+|-------|----------|--------------|
+| **Gemini 2.5 Pro** | Complex code generation, debugging, research | All plans |
+| **Gemini 3 Flash** | Fast, lightweight coding questions | All plans |
+| **Gemini 3 Pro** | Advanced reasoning, long contexts, technical analysis | All plans |
+| **Gemini 3.1 Pro** | Edit-then-test loops with high tool precision | All plans |
+
+### Other Models
+
+| Model | Provider | Best For |
+|-------|----------|----------|
+| **Grok Code Fast 1** | xAI | Fast code completions, debugging across languages |
+| **Qwen2.5** | Alibaba | Code generation, reasoning, debugging |
+| **Goldeneye** | Microsoft | Complex problem-solving, sophisticated reasoning |
+
+## Using the Model Picker
+
+Visual Studio 2022 and 2026 support the model picker in Chat and inline suggestion modes. To change models:
+
+1. Open Copilot Chat in Visual Studio
+2. Look for the model selector dropdown (typically near the chat input)
+3. Select your preferred model from the list
+4. Your selection persists for the current session
+
+### Auto Model Selection
+
+When set to **Auto**, Copilot automatically selects the best available model based on:
+
+- Task complexity
+- Model availability
+- Rate limiting status
+- Your plan entitlements
+
+**Benefits of Auto:**
+- Faster responses by routing to available models
+- Lower chance of hitting rate limits
+- 10% discount on premium requests (paid users)
+
+> **Recommendation:** Start with Auto for most workflows. Switch to a specific model only when you have a particular need.
+
+## When to Use Which Model
+
+| Scenario | Recommended Model |
+|----------|-------------------|
+| **Daily coding tasks** | GPT-4.1, GPT-5 mini, Auto |
+| **Quick syntax questions** | Claude Haiku 4.5, Gemini 3 Flash |
+| **Complex debugging** | GPT-5.2, Claude Opus 4.6, Gemini 3 Pro |
+| **Multi-file refactoring** | GPT-5.1-Codex, Claude Sonnet 4.5 |
+| **Architecture decisions** | GPT-5.2, Claude Opus 4.6 |
+| **Working with images/UI** | GPT-5 mini, Claude Sonnet 4.0, Gemini 3 Pro |
+| **Agentic/autonomous tasks** | GPT-5.2-Codex, GPT-5.1-Codex-Max |
+| **Fast inline completions** | GPT-4.1 (default) |
+| **Cost-sensitive workflows** | Claude Haiku 4.5, GPT-5.1-Codex-Mini |
+
+### Model Selection Strategy
+
+1. **For speed:** Claude Haiku 4.5 or Gemini 3 Flash give the fastest responses
+2. **For complex reasoning:** GPT-5.2, Claude Opus 4.6, or Gemini 3 Pro excel at multi-step problems
+3. **For agentic workflows:** GPT-5.2-Codex or GPT-5.1-Codex-Max are optimized for autonomous coding
+4. **For balanced performance:** Claude Sonnet 4.5 or GPT-5.1-Codex handle most tasks well
+
+## Premium Request Multipliers
+
+Different models consume requests at different rates. Premium models (Opus, GPT-5.x-Codex) consume more quota per request:
+
+- **Free:** Limited premium requests
+- **Pro:** Standard premium allocation
+- **Pro+:** Expanded premium allocation + exclusive models
+- **Business/Enterprise:** Organization-managed quotas
+
+> **Tip:** Use Auto mode to optimize quota consumption. It routes to efficient models when appropriate and gives a 10% discount on premium requests.
+
+## Bring Your Own Key (BYOK)
+
+BYOK allows you to connect your own LLM provider API keys to GitHub Copilot, enabling:
+
+- **Direct billing** through your provider instead of GitHub
+- **No quota impact** — BYOK usage doesn't count against Copilot limits
+- **Custom models** — use fine-tuned or specialized models
+- **Maximum context windows** configurable by admins
+
+### Supported BYOK Providers
+
+- **Anthropic** — Claude models
+- **OpenAI** — GPT models
+- **Microsoft Foundry** — Azure AI models
+- **xAI** — Grok models
+- **AWS Bedrock** — Various models
+- **Google AI Studio** — Gemini models
+- **OpenAI-compatible providers** — Any compatible endpoint
+
+### BYOK Availability
+
+| Plan | BYOK Support |
+|------|--------------|
+| Free / Pro / Pro+ | Supported in VS Code via settings |
+| Business | Not yet available |
+| Enterprise | Available via Copilot settings (admin-enabled) |
+
+> **Note:** Visual Studio BYOK support follows VS Code—check your settings for API key configuration options.
+
+## Deprecated Models
+
+The following models were deprecated in October 2025:
+
+| Deprecated Model | Suggested Replacement |
+|------------------|----------------------|
+| Claude Sonnet 3.7 | Claude Sonnet 4.5 |
+| Claude Sonnet 3.7 Thinking | Claude Sonnet 4.5 |
+| Claude Opus 4 | Claude Opus 4.6 |
+| GPT o3 | GPT-5 |
+| GPT o1 mini | GPT-5 mini |
+
+If you were using any deprecated models, update your workflows to use the suggested replacements.
+
+## Key Takeaways
+
+1. **Auto is recommended** for most users—it optimizes for speed, quality, and cost
+2. **GPT-4.1** remains the default for code completions and general chat
+3. **GPT-5.x-Codex models** are best for agentic workflows and complex engineering
+4. **Claude Opus 4.6** is the premium choice for deep reasoning
+5. **Claude Haiku 4.5 / Gemini 3 Flash** are best for fast, simple tasks
+6. **BYOK** enables enterprise customization without quota consumption
+7. **Model availability varies by plan**—Enterprise and Pro+ get access to premium models

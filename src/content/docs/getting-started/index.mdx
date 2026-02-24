@@ -1,0 +1,191 @@
+---
+title: "Getting Started with GitHub Copilot in Visual Studio"
+description: "Learn how to install, configure, and start using GitHub Copilot in Visual Studio 2022"
+order: 1
+section: "Getting Started"
+---
+
+## Overview
+
+GitHub Copilot brings AI-powered code completion and chat capabilities directly into Visual Studio. This guide walks you through everything you need to get up and running—from installation to your first AI-assisted coding session.
+
+## Prerequisites
+
+Before installing GitHub Copilot, ensure you have:
+
+### Visual Studio Version
+- **Minimum:** Visual Studio 2022 version 17.8 or later
+- **Recommended:** Latest version for full feature access
+- **For Copilot Free activation at first launch:** Visual Studio 17.14 or later
+- **For state management features:** Visual Studio 2022 version 17.10 or later
+
+### GitHub Account
+A GitHub account is required for authentication. If you don't have one, you can create one during the sign-in process.
+
+### Copilot Subscription
+You'll need one of the following plans:
+
+| Plan | Price | Best For |
+|------|-------|----------|
+| **Copilot Free** | $0 | Trying Copilot with usage limits |
+| **Copilot Pro** | $10/month or $100/year | Individual developers (free for students, teachers, OSS maintainers) |
+| **Copilot Pro+** | $39/month or $390/year | AI power users needing more premium requests |
+| **Copilot Business** | $19/seat/month | Organizations |
+| **Copilot Enterprise** | $39/seat/month | Enterprises with advanced features |
+
+## Installation
+
+Choose the method that works best for your Visual Studio version:
+
+### Method 1: Via Visual Studio Installer (Recommended for VS 17.10+)
+
+1. Launch the **Visual Studio Installer**
+2. Select the Visual Studio installation you want to modify
+3. Click **Modify**
+4. Select any workload (e.g., ".NET desktop development")
+5. In the **Optional** components list, ensure **GitHub Copilot** is checked
+6. Click **Modify** to complete the installation
+
+### Method 2: From Within Visual Studio
+
+1. Launch Visual Studio (version 17.8 or later)
+2. Create a new project, open an existing project, or continue without code
+3. Click the **GitHub Copilot** badge in the upper-right corner
+4. Select **Install Copilot** from the dropdown menu
+5. Follow the installer prompts
+
+### Method 3: Via Manage Extensions (VS 17.9 or earlier)
+
+1. Go to **Extensions** → **Manage Extensions**
+2. Search for "GitHub Copilot"
+3. Install the extension
+4. Restart Visual Studio
+
+## Sign-In Process
+
+### For Users with an Existing GitHub Account
+
+1. Launch Visual Studio
+2. Click the **GitHub Copilot** badge in the upper-right corner
+3. Select **Open Chat Window**
+4. When prompted, sign in with your GitHub account in your browser
+5. Return to Visual Studio—Copilot is now active
+
+### For New Users (Copilot Free)
+
+1. Open the Chat window with **Ctrl+\+C** or via the Copilot badge
+2. Enter a prompt to trigger the "Get started with Copilot Free" dialog
+3. Select **Continue with GitHub** or **Continue with Google**
+4. Sign in to your existing GitHub account, or create a new one
+5. You'll be redirected back to Visual Studio when finished
+
+### First Launch Activation (VS 17.14+)
+
+Visual Studio 17.14 and later can activate Copilot Free during first launch. The "Get started with Copilot Free" dialog appears automatically when you try to use any Copilot feature.
+
+## Copilot Free vs Pro Comparison
+
+Understanding the differences helps you choose the right plan:
+
+### Copilot Free (No Cost)
+
+| Feature | Limit |
+|---------|-------|
+| Code completions | 2,000 per month |
+| Chat messages | 50 per month |
+| Premium requests | 50 per month |
+| Models available | Limited selection |
+| Agent mode | ❌ |
+| Copilot coding agent | ❌ |
+| Next edit suggestions | ❌ |
+| MCP support | ❌ |
+| Copilot CLI | ❌ |
+
+### Copilot Pro ($10/month or $100/year)
+
+| Feature | Limit |
+|---------|-------|
+| Code completions | **Unlimited** |
+| Chat messages | **Unlimited** with included models |
+| Premium requests | 300 per month |
+| Models available | Premium models included |
+| Agent mode | ✅ |
+| Copilot coding agent | ✅ |
+| Next edit suggestions | ✅ |
+| MCP support | ✅ |
+| Copilot CLI | ✅ |
+
+### Who Cannot Use Copilot Free
+
+Copilot Free is not available if you:
+- Have an Enterprise Managed User (EMU) account
+- Have Copilot access through an organization
+- Have an existing Copilot Pro subscription or trial
+- Already have free Pro access as a student, teacher, or open-source maintainer
+
+### When Limits Are Reached
+
+- **Completions limit:** IntelliCode suggestions replace Copilot completions
+- **Chat limit:** Chat stops responding (badge stays green)
+- **Resolution:** Wait for the monthly reset or upgrade to Pro
+
+## First Steps to Try
+
+Once you're signed in, try these features:
+
+### 1. Code Completions
+
+Start typing code in any supported language. Copilot displays suggestions as gray "ghost text." Press **Tab** to accept, **Esc** to dismiss, or **Alt+]** / **Alt+[** to cycle through alternatives.
+
+### 2. Open the Chat Window
+
+Press **Ctrl+\+C** to open the Chat window. Ask questions like:
+- "How do I read a file in C#?"
+- "Explain this code"
+- "Write unit tests for the selected function"
+
+### 3. Check the Status Badge
+
+The Copilot badge in the upper-right corner shows your connection status:
+- **Green (Active):** Copilot is ready
+- **Inactive:** Sign-in or subscription issue
+- **Unavailable:** Network or server problem
+
+### 4. Configure Settings
+
+Click the **Copilot badge** → **Settings** to configure:
+- Enable/disable completions
+- Block suggestions matching public code (via [github.com/settings/copilot](https://github.com/settings/copilot))
+- Add custom instructions with `.github/copilot-instructions.md`
+
+## Essential Keyboard Shortcuts
+
+| Action | Shortcut |
+|--------|----------|
+| Open Chat Window | **Ctrl+\+C** |
+| Accept suggestion | **Tab** |
+| Dismiss suggestion | **Esc** |
+| Next suggestion | **Alt+]** |
+| Previous suggestion | **Alt+[** |
+
+## Troubleshooting
+
+### Common Issues
+
+- **Copilot inactive:** Ensure you're signed in with a GitHub account that has Copilot access
+- **Credentials need refresh:** Select "Refresh your GitHub credentials" from the Copilot badge dropdown
+- **Network issues:** Check the troubleshooting page via the Copilot badge dropdown
+- **Wrong account:** Switch active accounts in account settings if you have multiple GitHub accounts
+
+### Hiding or Removing Copilot
+
+If you prefer not to use Copilot:
+- **Hide the badge:** Tools → Options → Environment → Hide Copilot Badge
+- **Uninstall:** Visual Studio Installer → Individual components → Uncheck GitHub Copilot → Modify
+
+## Next Steps
+
+Now that Copilot is set up, explore these guides to get the most out of it:
+- [Code Completions](/docs/code-completions) — Master inline suggestions
+- [Chat Features](/docs/chat) — Learn advanced chat techniques
+- [Custom Instructions](/docs/customization/copilot-instructions) — Tailor Copilot to your projects
