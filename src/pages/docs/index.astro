@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import DocsLayout from '../../layouts/DocsLayout.astro';
 
 const docs = await getCollection('docs');
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 // Group docs by section based on their folder
 const sections = {
