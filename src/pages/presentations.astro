@@ -1,9 +1,11 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const presentations = [
   {
     title: 'Introduction to GitHub Copilot in Visual Studio',
     description: '11-slide overview covering all major features, keyboard shortcuts, and demo talking points',
-    path: '/copilot-visual-studio-guide/presentations/intro.html',
+    path: `${base}presentations/intro.html`,
     slides: 11,
     icon: '🎯'
   }
@@ -81,6 +83,6 @@ const presentations = [
       </a>
     ))}
   </div>
-  <a href="/" class="back">← Back to Home</a>
+  <a href={base} class="back">← Back to Home</a>
 </body>
 </html>

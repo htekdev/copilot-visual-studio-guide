@@ -1,27 +1,29 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const sampleCategories = [
   {
     title: 'Inline Completions',
     description: 'Comment-first patterns, partial accept techniques',
-    path: '/samples/completions/',
+    path: `${base}samples/completions/`,
     icon: '⚡'
   },
   {
     title: 'Copilot Chat',
     description: 'Slash commands, context references, agent prompts',
-    path: '/samples/chat/',
+    path: `${base}samples/chat/`,
     icon: '💬'
   },
   {
     title: 'Agent Mode',
     description: 'Multi-file operations, scaffolding, refactoring',
-    path: '/samples/agent-mode/',
+    path: `${base}samples/agent-mode/`,
     icon: '🤖'
   },
   {
     title: 'Custom Instructions',
     description: 'Project conventions, prompt files, instruction templates',
-    path: '/samples/custom-instructions/',
+    path: `${base}samples/custom-instructions/`,
     icon: '📝'
   }
 ];
@@ -107,6 +109,6 @@ const sampleCategories = [
       </a>
     ))}
   </div>
-  <a href="/" class="back">← Back to Home</a>
+  <a href={base} class="back">← Back to Home</a>
 </body>
 </html>

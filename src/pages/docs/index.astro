@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import DocsLayout from '../../layouts/DocsLayout.astro';
+
+const docs = await getCollection('docs');
+const base = import.meta.env.BASE_URL;
+
+// Group docs by section based on their folder
+const sections = {
+  'Getting Started': docs.filter(d => d.slug.startsWith('getting-started')),
+  'Features': docs.filter(d => d.slug.startsWith('features')),
+  'Advanced': docs.filter(d => d.slug.startsWith('advanced')),
+  'Reference': docs.filter(d => d.slug.startsWith('reference')),
+};
+
+// Sort each section by order if available
+Object.keys(sections).forEach(key => {
+  sections[key].sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+});
+---
+
+<DocsLayout title="Documentation" description="Browse all documentation for GitHub Copilot in Visual Studio">
+  <p class="text-text-secondary mb-8">
+    Explore comprehensive guides covering everything from basic setup to advanced features.
+  </p>
+
+  {Object.entries(sections).map(([sectionName, sectionDocs]) => (
+    sectionDocs.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-2xl font-heading font-bold text-text-primary mb-4 border-b border-border-default pb-2">
+          {sectionName}
+        </h2>
+        <ul class="space-y-3">
+          {sectionDocs.map(doc => (
+            <li>
+              <a 
+                href={`${base}docs/${doc.slug}/`}
+                class="block p-4 rounded-lg bg-bg-overlay border border-border-default hover:border-accent-cyan transition-colors group"
+              >
+                <h3 class="text-lg font-semibold text-text-primary group-hover:text-accent-cyan transition-colors">
+                  {doc.data.title}
+                </h3>
+                <p class="text-sm text-text-muted mt-1">{doc.data.description}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  ))}
+</DocsLayout>

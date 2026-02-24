@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const videos = await getCollection('videos');
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Videos" description="Video tutorials and walkthroughs for GitHub Copilot in Visual Studio">
+  <main class="min-h-screen px-4 py-16">
+    <div class="max-w-4xl mx-auto">
+      <!-- Header -->
+      <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">
+          <span class="gradient-text">Video Resources</span>
+        </h1>
+        <p class="text-xl text-text-secondary">
+          Tutorials and walkthroughs for GitHub Copilot in Visual Studio
+        </p>
+      </header>
+
+      <!-- Video Grid -->
+      <div class="grid gap-6">
+        {videos.map(video => (
+          <a 
+            href={video.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-6 rounded-xl bg-bg-surface border border-border-default hover:border-accent-cyan transition-all group"
+          >
+            <div class="flex items-start gap-4">
+              <div class="text-4xl">🎬</div>
+              <div class="flex-1">
+                <h2 class="text-xl font-heading font-semibold text-text-primary group-hover:text-accent-cyan transition-colors mb-2">
+                  {video.data.title}
+                </h2>
+                <p class="text-text-secondary mb-3">{video.data.description}</p>
+                <div class="flex items-center gap-4 text-sm text-text-muted">
+                  {video.data.duration && (
+                    <span class="flex items-center gap-1">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      {video.data.duration}
+                    </span>
+                  )}
+                  <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    {video.data.source}
+                  </span>
+                </div>
+              </div>
+              <div class="text-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Back Link -->
+      <div class="mt-12 text-center">
+        <a href={base} class="text-accent-cyan hover:underline">
+          ← Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
