@@ -5,21 +5,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const videos = await getCollection('videos');
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
-// Define pillars with metadata
+// Define pillars with metadata - ordered as learning path
 const pillars = [
-  { id: 'getting-started', name: 'Getting Started', icon: '🚀', description: 'Introduction and setup guides' },
-  { id: 'autocomplete', name: 'Autocomplete', icon: '⚡', description: 'Code completions and suggestions' },
-  { id: 'chat', name: 'Chat', icon: '💬', description: 'Copilot Chat and conversations' },
-  { id: 'agent-mode', name: 'Agent Mode', icon: '🤖', description: 'Autonomous multi-step tasks' },
-  { id: 'mcp', name: 'MCP', icon: '🔌', description: 'Model Context Protocol' },
-  { id: 'code-review', name: 'Code Review', icon: '🔍', description: 'AI-powered code review' },
-  { id: 'advanced', name: 'Advanced', icon: '⚙️', description: 'NES, debugging, custom instructions' },
+  { id: 'getting-started', name: 'Getting Started', icon: '🚀', description: 'Installation, setup, and VS 2026 overview' },
+  { id: 'completions', name: 'Completions', icon: '⚡', description: 'AI-powered code suggestions and autocomplete' },
+  { id: 'chat', name: 'Chat & Models', icon: '💬', description: 'Chat interface, model selection, custom instructions' },
+  { id: 'edits', name: 'Copilot Edits', icon: '✏️', description: 'Multi-file editing and app building' },
+  { id: 'debugging', name: 'Debugging', icon: '🐛', description: 'AI-enhanced debugging and exception analysis' },
+  { id: 'agent-mode', name: 'Agent Mode', icon: '🤖', description: 'Autonomous agents and Profiler Agent' },
+  { id: 'mcp', name: 'MCP', icon: '🔌', description: 'Model Context Protocol integration' },
+  { id: 'advanced', name: 'Advanced', icon: '⚙️', description: 'Git integration, vision, DevOps, C++' },
 ];
 
-// Group videos by pillar
+// Group videos by pillar and sort by order within each pillar
 const videosByPillar = pillars.map(pillar => ({
   ...pillar,
-  videos: videos.filter(v => v.data.pillar === pillar.id)
+  videos: videos
+    .filter(v => v.data.pillar === pillar.id)
+    .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99))
 }));
 ---
 
@@ -29,13 +32,13 @@ const videosByPillar = pillars.map(pillar => ({
       <!-- Header -->
       <header class="text-center mb-12">
         <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">
-          <span class="gradient-text">Video Library</span>
+          <span class="gradient-text">Learning Paths</span>
         </h1>
         <p class="text-xl text-text-secondary max-w-2xl mx-auto">
-          Curated tutorials from Microsoft and GitHub, organized by Copilot enablement pillar
+          Curated video tutorials from official Microsoft channels, organized as learning paths
         </p>
         <p class="text-sm text-text-muted mt-2">
-          {videos.length} videos from official sources
+          {videos.length} videos • Follow the numbered order within each pillar
         </p>
       </header>
 
@@ -67,13 +70,18 @@ const videosByPillar = pillars.map(pillar => ({
             </div>
             
             <div class="grid gap-4 md:grid-cols-2">
-              {pillar.videos.map(video => (
+              {pillar.videos.map((video, index) => (
                 <a 
                   href={video.data.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="block p-5 rounded-xl bg-bg-surface border border-border-default hover:border-accent-cyan transition-all group"
+                  class="block p-5 rounded-xl bg-bg-surface border border-border-default hover:border-accent-cyan transition-all group relative"
                 >
+                  {video.data.order && (
+                    <span class="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-accent-purple text-white text-xs font-bold flex items-center justify-center">
+                      {video.data.order}
+                    </span>
+                  )}
                   <h3 class="font-semibold text-text-primary group-hover:text-accent-cyan transition-colors mb-2 line-clamp-2">
                     {video.data.title}
                   </h3>
@@ -93,9 +101,6 @@ const videosByPillar = pillars.map(pillar => ({
                       </svg>
                       {video.data.source}
                     </span>
-                    {video.data.date && (
-                      <span>{video.data.date}</span>
-                    )}
                     <svg class="w-4 h-4 ml-auto text-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
@@ -109,49 +114,71 @@ const videosByPillar = pillars.map(pillar => ({
 
       <!-- Official Playlists -->
       <section class="mt-16 pt-16 border-t border-border-default">
-        <h2 class="text-2xl font-heading font-semibold text-text-primary mb-6 text-center">
+        <h2 class="text-2xl font-heading font-semibold text-text-primary mb-2 text-center">
           📺 Official YouTube Playlists
         </h2>
+        <p class="text-sm text-text-muted text-center mb-6">
+          Subscribe to these official Microsoft Visual Studio playlists for the latest updates
+        </p>
         <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <a
-            href="https://www.youtube.com/playlist?list=PLj6YeMhvp2S5_hvBl2SE-7YCHYlLQ0bPt"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
-          >
-            <div class="text-2xl mb-2">🐙</div>
-            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">GitHub Copilot Series</div>
-            <div class="text-xs text-text-muted">GitHub</div>
-          </a>
-          <a
-            href="https://www.youtube.com/playlist?list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
-          >
-            <div class="text-2xl mb-2">💻</div>
-            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">Copilot in VS Code</div>
-            <div class="text-xs text-text-muted">Visual Studio Code</div>
-          </a>
-          <a
-            href="https://www.youtube.com/playlist?list=PLReL099Y5nRfLtXLW6u2dEUKjKRsI2p-Z"
+            href="https://www.youtube.com/playlist?list=PLReL099Y5nRcJlI-eUjZJXg4DkRzlnBIF"
             target="_blank"
             rel="noopener noreferrer"
             class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
           >
             <div class="text-2xl mb-2">🎯</div>
-            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">VS Copilot Advocacy</div>
-            <div class="text-xs text-text-muted">Microsoft</div>
+            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">Get Started Series</div>
+            <div class="text-xs text-text-muted">9 videos • Beginner</div>
           </a>
           <a
-            href="https://www.youtube.com/playlist?list=PLReL099Y5nRewXO72XedGQxyntVqerUy0"
+            href="https://www.youtube.com/playlist?list=PLReL099Y5nRfCULHLrLAgly0JF6F5L6S1"
             target="_blank"
             rel="noopener noreferrer"
             class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
           >
-            <div class="text-2xl mb-2">🌙</div>
-            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">After Hours</div>
-            <div class="text-xs text-text-muted">Microsoft</div>
+            <div class="text-2xl mb-2">📚</div>
+            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">Getting Started</div>
+            <div class="text-xs text-text-muted">5 videos • Intermediate</div>
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PLReL099Y5nRftyGRC7xvHZWxlbhbRFP4d"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
+          >
+            <div class="text-2xl mb-2">🤖</div>
+            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">Agent Mode Series</div>
+            <div class="text-xs text-text-muted">4 videos • Advanced</div>
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PLReL099Y5nRcrdj7sPw2ln9VXOmxy2F8P"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
+          >
+            <div class="text-2xl mb-2">🎪</div>
+            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">Live! 360 Sessions</div>
+            <div class="text-xs text-text-muted">19 videos • Deep Dives</div>
+          </a>
+        </div>
+        
+        <!-- Official Channels -->
+        <h3 class="text-lg font-semibold text-text-primary mt-10 mb-4 text-center">
+          Official Channels to Follow
+        </h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://www.youtube.com/@visualstudio" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full border border-border-default hover:border-accent-cyan text-sm text-text-secondary hover:text-accent-cyan transition-all">
+            @visualstudio (343K subs)
+          </a>
+          <a href="https://www.youtube.com/@dotnet" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full border border-border-default hover:border-accent-cyan text-sm text-text-secondary hover:text-accent-cyan transition-all">
+            @dotnet (350K subs)
+          </a>
+          <a href="https://www.youtube.com/@MicrosoftDeveloper" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full border border-border-default hover:border-accent-cyan text-sm text-text-secondary hover:text-accent-cyan transition-all">
+            @MicrosoftDeveloper (669K subs)
+          </a>
+          <a href="https://www.youtube.com/@GitHub" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full border border-border-default hover:border-accent-cyan text-sm text-text-secondary hover:text-accent-cyan transition-all">
+            @GitHub (602K subs)
           </a>
         </div>
       </section>

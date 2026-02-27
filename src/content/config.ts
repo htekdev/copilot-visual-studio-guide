@@ -8,9 +8,10 @@ const videos = defineCollection({
     url: z.string().url(),
     duration: z.string().optional(),
     source: z.string(),
-    pillar: z.enum(['getting-started', 'autocomplete', 'chat', 'agent-mode', 'mcp', 'code-review', 'advanced']),
+    pillar: z.enum(['getting-started', 'completions', 'chat', 'edits', 'agent-mode', 'mcp', 'debugging', 'advanced']),
     date: z.string().optional(),
     thumbnail: z.string().optional(),
+    order: z.number().optional(), // Learning path order within pillar
   }),
 });
 
