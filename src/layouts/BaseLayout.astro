@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
 
 interface Props {
   title: string;
@@ -30,6 +31,7 @@ const { title, description = 'GitHub Copilot Visual Studio Guide' } = Astro.prop
     <title>{title}</title>
   </head>
   <body class="bg-bg-void text-text-primary font-body antialiased">
+    <Navbar />
     <slot />
   </body>
 </html>

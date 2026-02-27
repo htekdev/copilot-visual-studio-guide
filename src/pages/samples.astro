@@ -1,114 +1,84 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
+// External links to official sample resources
 const sampleCategories = [
   {
     title: 'Inline Completions',
     description: 'Comment-first patterns, partial accept techniques',
-    path: `${base}samples/completions/`,
-    icon: '⚡'
+    path: 'https://learn.microsoft.com/visualstudio/ide/visual-studio-github-copilot-extension#code-completions',
+    icon: '⚡',
+    external: true
   },
   {
     title: 'Copilot Chat',
     description: 'Slash commands, context references, agent prompts',
-    path: `${base}samples/chat/`,
-    icon: '💬'
+    path: 'https://learn.microsoft.com/visualstudio/ide/copilot-chat-context',
+    icon: '💬',
+    external: true
   },
   {
     title: 'Agent Mode',
     description: 'Multi-file operations, scaffolding, refactoring',
-    path: `${base}samples/agent-mode/`,
-    icon: '🤖'
+    path: 'https://learn.microsoft.com/visualstudio/ide/copilot-agent-mode',
+    icon: '🤖',
+    external: true
   },
   {
     title: 'Custom Instructions',
     description: 'Project conventions, prompt files, instruction templates',
-    path: `${base}samples/custom-instructions/`,
-    icon: '📝'
+    path: 'https://learn.microsoft.com/visualstudio/ide/copilot-custom-instructions',
+    icon: '📝',
+    external: true
   }
 ];
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Code Samples | Copilot Visual Studio Guide</title>
-  <style>
-    :root {
-      --bg-primary: #0A0A0F;
-      --bg-card: rgba(255, 255, 255, 0.03);
-      --accent-cyan: #00E5FF;
-      --accent-purple: #7C3AED;
-      --text-primary: #F8FAFC;
-      --text-secondary: #94A3B8;
-      --border-color: rgba(255, 255, 255, 0.1);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      min-height: 100vh;
-      padding: 4rem 2rem;
-    }
-    h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .subtitle {
-      text-align: center;
-      color: var(--text-secondary);
-      margin-bottom: 3rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-    }
-    .card:hover {
-      border-color: var(--accent-cyan);
-      transform: translateY(-4px);
-    }
-    .icon { font-size: 2rem; margin-bottom: 1rem; }
-    .card h2 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent-cyan);
-    }
-    .card p { color: var(--text-secondary); font-size: 0.95rem; }
-    a { text-decoration: none; color: inherit; }
-    .back { display: block; text-align: center; margin-top: 3rem; color: var(--accent-cyan); }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <h1>Code Samples</h1>
-  <p class="subtitle">Practical examples for GitHub Copilot in Visual Studio</p>
-  <div class="grid">
-    {sampleCategories.map(cat => (
-      <a href={cat.path} class="card">
-        <div class="icon">{cat.icon}</div>
-        <h2>{cat.title}</h2>
-        <p>{cat.description}</p>
+<BaseLayout title="Code Samples | Copilot Visual Studio Guide">
+  <main class="max-w-5xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-heading font-bold text-center mb-4 gradient-text">Code Samples</h1>
+    <p class="text-center text-text-secondary mb-12">Links to official sample documentation and guides</p>
+    
+    <div class="grid gap-6 md:grid-cols-2">
+      {sampleCategories.map(cat => (
+        <a 
+          href={cat.path}
+          target={cat.external ? "_blank" : undefined}
+          rel={cat.external ? "noopener noreferrer" : undefined}
+          class="block p-6 rounded-xl bg-bg-surface border border-border-default hover:border-accent-cyan transition-all group"
+        >
+          <div class="flex items-start justify-between">
+            <div class="text-4xl mb-4">{cat.icon}</div>
+            {cat.external && (
+              <svg class="w-4 h-4 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            )}
+          </div>
+          <h2 class="text-xl font-semibold text-accent-cyan mb-2 group-hover:text-accent-violet transition-colors">{cat.title}</h2>
+          <p class="text-text-secondary">{cat.description}</p>
+        </a>
+      ))}
+    </div>
+
+    <!-- Link to local samples directory -->
+    <section class="mt-12 p-6 rounded-xl bg-bg-overlay border border-border-default">
+      <h2 class="text-xl font-heading font-semibold text-text-primary mb-4">📁 Local Samples</h2>
+      <p class="text-text-secondary mb-4">
+        This repository includes code samples in the <code class="px-2 py-1 bg-bg-surface rounded text-accent-cyan">/samples</code> directory.
+      </p>
+      <a 
+        href="https://github.com/htekdev/copilot-visual-studio-guide/tree/main/samples"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-accent-cyan hover:text-accent-violet transition-colors"
+      >
+        View on GitHub
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
       </a>
-    ))}
-  </div>
-  <a href={base} class="back">← Back to Home</a>
-</body>
-</html>
+    </section>
+  </main>
+</BaseLayout>

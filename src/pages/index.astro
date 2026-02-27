@@ -63,8 +63,8 @@ const quickLinks = [
   <main class="min-h-screen">
     <!-- Hero Section -->
     <section class="relative overflow-hidden px-4 py-24 md:py-32">
-      <!-- Background gradient -->
-      <div class="absolute inset-0 -z-10">
+      <!-- Background gradient - pointer-events-none ensures they don't block clicks -->
+      <div class="absolute inset-0 -z-10 pointer-events-none">
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-cyan/10 rounded-full blur-[128px]"></div>
         <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-violet/10 rounded-full blur-[128px]"></div>
       </div>

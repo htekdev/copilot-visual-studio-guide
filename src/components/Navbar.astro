@@ -1,0 +1,92 @@
+---
+const currentPath = Astro.url.pathname;
+const rawBase = import.meta.env.BASE_URL || '/';
+// Ensure base ends with a slash for proper URL concatenation
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const navLinks = [
+  { href: base, label: 'Home', icon: '🏠' },
+  { href: `${base}videos/`, label: 'Learning Paths', icon: '🎬' },
+  { href: `${base}presentations/`, label: 'Presentations', icon: '📊' },
+  { href: `${base}samples/`, label: 'Samples', icon: '💻' },
+  { href: `${base}resources/`, label: 'Resources', icon: '🔗' },
+  { href: `${base}whats-new/`, label: "What's New", icon: '✨' },
+];
+
+function isActive(href: string) {
+  if (href === base) return currentPath === base || currentPath === `${base}index.html` || currentPath === rawBase;
+  return currentPath.startsWith(href);
+}
+---
+
+<nav class="sticky top-0 z-50 glass border-b border-border-default relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo / Brand -->
+      <a href={base} class="flex items-center gap-3 group relative z-10">
+        <span class="text-2xl">🚀</span>
+        <span class="font-heading font-semibold text-text-primary group-hover:text-accent-cyan transition-colors hidden sm:inline">
+          Copilot VS Guide
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-1 relative z-10">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-all',
+              isActive(link.href)
+                ? 'bg-accent-cyan/10 text-accent-cyan'
+                : 'text-text-secondary hover:text-text-primary hover:bg-bg-overlay',
+            ]}
+          >
+            <span class="mr-1.5">{link.icon}</span>
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-overlay transition-colors relative z-10"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border-default">
+    <div class="px-4 py-3 space-y-1">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'block px-3 py-2 rounded-lg text-sm font-medium transition-all',
+            isActive(link.href)
+              ? 'bg-accent-cyan/10 text-accent-cyan'
+              : 'text-text-secondary hover:text-text-primary hover:bg-bg-overlay',
+          ]}
+        >
+          <span class="mr-2">{link.icon}</span>
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
