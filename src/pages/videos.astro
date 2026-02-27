@@ -4,63 +4,157 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const videos = await getCollection('videos');
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+// Define pillars with metadata
+const pillars = [
+  { id: 'getting-started', name: 'Getting Started', icon: '🚀', description: 'Introduction and setup guides' },
+  { id: 'autocomplete', name: 'Autocomplete', icon: '⚡', description: 'Code completions and suggestions' },
+  { id: 'chat', name: 'Chat', icon: '💬', description: 'Copilot Chat and conversations' },
+  { id: 'agent-mode', name: 'Agent Mode', icon: '🤖', description: 'Autonomous multi-step tasks' },
+  { id: 'mcp', name: 'MCP', icon: '🔌', description: 'Model Context Protocol' },
+  { id: 'code-review', name: 'Code Review', icon: '🔍', description: 'AI-powered code review' },
+  { id: 'advanced', name: 'Advanced', icon: '⚙️', description: 'NES, debugging, custom instructions' },
+];
+
+// Group videos by pillar
+const videosByPillar = pillars.map(pillar => ({
+  ...pillar,
+  videos: videos.filter(v => v.data.pillar === pillar.id)
+}));
 ---
 
-<BaseLayout title="Videos" description="Video tutorials and walkthroughs for GitHub Copilot in Visual Studio">
+<BaseLayout title="Videos" description="Curated video tutorials for GitHub Copilot organized by enablement pillar">
   <main class="min-h-screen px-4 py-16">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <!-- Header -->
       <header class="text-center mb-12">
         <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">
-          <span class="gradient-text">Video Resources</span>
+          <span class="gradient-text">Video Library</span>
         </h1>
-        <p class="text-xl text-text-secondary">
-          Tutorials and walkthroughs for GitHub Copilot in Visual Studio
+        <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+          Curated tutorials from Microsoft and GitHub, organized by Copilot enablement pillar
+        </p>
+        <p class="text-sm text-text-muted mt-2">
+          {videos.length} videos from official sources
         </p>
       </header>
 
-      <!-- Video Grid -->
-      <div class="grid gap-6">
-        {videos.map(video => (
-          <a 
-            href={video.data.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block p-6 rounded-xl bg-bg-surface border border-border-default hover:border-accent-cyan transition-all group"
+      <!-- Pillar Navigation -->
+      <nav class="flex flex-wrap justify-center gap-2 mb-12">
+        {pillars.map(pillar => (
+          <a
+            href={`#${pillar.id}`}
+            class="px-4 py-2 rounded-full border border-border-default text-text-secondary hover:border-accent-cyan hover:text-accent-cyan transition-all text-sm"
           >
-            <div class="flex items-start gap-4">
-              <div class="text-4xl">🎬</div>
-              <div class="flex-1">
-                <h2 class="text-xl font-heading font-semibold text-text-primary group-hover:text-accent-cyan transition-colors mb-2">
-                  {video.data.title}
-                </h2>
-                <p class="text-text-secondary mb-3">{video.data.description}</p>
-                <div class="flex items-center gap-4 text-sm text-text-muted">
-                  {video.data.duration && (
-                    <span class="flex items-center gap-1">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {video.data.duration}
-                    </span>
-                  )}
-                  <span class="flex items-center gap-1">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                    </svg>
-                    {video.data.source}
-                  </span>
-                </div>
-              </div>
-              <div class="text-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </div>
-            </div>
+            {pillar.icon} {pillar.name}
           </a>
         ))}
+      </nav>
+
+      <!-- Video Sections by Pillar -->
+      <div class="space-y-16">
+        {videosByPillar.filter(p => p.videos.length > 0).map(pillar => (
+          <section id={pillar.id}>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-3xl">{pillar.icon}</span>
+              <div>
+                <h2 class="text-2xl font-heading font-semibold text-text-primary">{pillar.name}</h2>
+                <p class="text-sm text-text-muted">{pillar.description}</p>
+              </div>
+              <span class="ml-auto text-sm text-text-muted bg-bg-overlay px-3 py-1 rounded-full">
+                {pillar.videos.length} videos
+              </span>
+            </div>
+            
+            <div class="grid gap-4 md:grid-cols-2">
+              {pillar.videos.map(video => (
+                <a 
+                  href={video.data.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block p-5 rounded-xl bg-bg-surface border border-border-default hover:border-accent-cyan transition-all group"
+                >
+                  <h3 class="font-semibold text-text-primary group-hover:text-accent-cyan transition-colors mb-2 line-clamp-2">
+                    {video.data.title}
+                  </h3>
+                  <p class="text-sm text-text-secondary mb-3 line-clamp-2">{video.data.description}</p>
+                  <div class="flex items-center gap-3 text-xs text-text-muted">
+                    {video.data.duration && (
+                      <span class="flex items-center gap-1">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {video.data.duration}
+                      </span>
+                    )}
+                    <span class="flex items-center gap-1">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                      {video.data.source}
+                    </span>
+                    {video.data.date && (
+                      <span>{video.data.date}</span>
+                    )}
+                    <svg class="w-4 h-4 ml-auto text-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
+
+      <!-- Official Playlists -->
+      <section class="mt-16 pt-16 border-t border-border-default">
+        <h2 class="text-2xl font-heading font-semibold text-text-primary mb-6 text-center">
+          📺 Official YouTube Playlists
+        </h2>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <a
+            href="https://www.youtube.com/playlist?list=PLj6YeMhvp2S5_hvBl2SE-7YCHYlLQ0bPt"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
+          >
+            <div class="text-2xl mb-2">🐙</div>
+            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">GitHub Copilot Series</div>
+            <div class="text-xs text-text-muted">GitHub</div>
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
+          >
+            <div class="text-2xl mb-2">💻</div>
+            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">Copilot in VS Code</div>
+            <div class="text-xs text-text-muted">Visual Studio Code</div>
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PLReL099Y5nRfLtXLW6u2dEUKjKRsI2p-Z"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
+          >
+            <div class="text-2xl mb-2">🎯</div>
+            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">VS Copilot Advocacy</div>
+            <div class="text-xs text-text-muted">Microsoft</div>
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PLReL099Y5nRewXO72XedGQxyntVqerUy0"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all text-center group"
+          >
+            <div class="text-2xl mb-2">🌙</div>
+            <div class="font-semibold text-text-primary group-hover:text-accent-cyan">After Hours</div>
+            <div class="text-xs text-text-muted">Microsoft</div>
+          </a>
+        </div>
+      </section>
 
       <!-- Back Link -->
       <div class="mt-12 text-center">

@@ -1,15 +1,5 @@
 import { defineCollection, z } from 'astro:content';
 
-const docs = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    order: z.number().optional(),
-    section: z.string().optional(),
-  }),
-});
-
 const videos = defineCollection({
   type: 'content', 
   schema: z.object({
@@ -18,7 +8,10 @@ const videos = defineCollection({
     url: z.string().url(),
     duration: z.string().optional(),
     source: z.string(),
+    pillar: z.enum(['getting-started', 'autocomplete', 'chat', 'agent-mode', 'mcp', 'code-review', 'advanced']),
+    date: z.string().optional(),
+    thumbnail: z.string().optional(),
   }),
 });
 
-export const collections = { docs, videos };
+export const collections = { videos };

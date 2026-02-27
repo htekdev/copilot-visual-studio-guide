@@ -2,13 +2,13 @@
 
 <div align="center">
 
-**The comprehensive resource for mastering GitHub Copilot in Visual Studio**
+**A curated resource hub for GitHub Copilot in Visual Studio**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Built with Astro](https://img.shields.io/badge/Built%20with-Astro-FF5D01?logo=astro)](https://astro.build)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-[📖 Documentation](#-documentation) · [🎥 Videos](#-videos) · [💻 Samples](#-code-samples) · [🚀 Get Started](#-getting-started)
+[🆕 What's New](#-whats-new) · [🎥 Videos](#-video-library) · [📚 Resources](#-resources) · [🚀 Get Started](#-getting-started)
 
 </div>
 
@@ -16,44 +16,51 @@
 
 ## 📋 Overview
 
-This repository is a curated guide to help developers unlock the full potential of GitHub Copilot within Visual Studio. Whether you're just getting started or looking to master advanced features like Agent Mode and custom instructions, you'll find practical documentation, video tutorials, and working code samples here.
+This site is a **curated resource hub** for GitHub Copilot in Visual Studio. Rather than duplicating documentation, we focus on:
 
-## ✨ Features
+- **Curated links** to official Microsoft and GitHub sources
+- **Video library** organized by Copilot enablement pillars
+- **Changelog tracking** for what's new in Copilot
+- **Presentations** for team training and demos
 
-- **📖 Documentation** — In-depth guides covering every Copilot feature in Visual Studio
-- **🎥 Video Tutorials** — Step-by-step walkthroughs for visual learners
-- **💻 Code Samples** — Real-world examples you can run and learn from
-- **🔬 Research Notes** — Technical deep-dives and changelog tracking
-- **🎨 Presentations** — Ready-to-use slides for team training and demos
+## 🆕 What's New
 
-## 📖 Documentation
+Track the latest updates for GitHub Copilot in Visual Studio:
 
-| Topic | Description |
-|-------|-------------|
-| [Getting Started](src/content/docs/) | Installation, setup, and first steps |
-| [Code Completions](research/completions.md) | Inline suggestions and Tab completion |
-| [Copilot Chat](research/chat.md) | Conversational AI assistance |
-| [Agent Mode](research/agent-mode.md) | Autonomous multi-step task execution |
-| [Code Review](research/code-review.md) | AI-powered code review features |
-| [Custom Instructions](research/custom-instructions.md) | Personalizing Copilot behavior |
-| [MCP Integration](research/mcp.md) | Model Context Protocol setup |
-| [Models](research/models.md) | Available AI models and selection |
-| [Keyboard Shortcuts](research/shortcuts.md) | Essential shortcuts reference |
+- **January 2026**: Colorized completions, partial acceptance
+- **November 2025**: VS 2026 GA, GitHub cloud agent preview
+- **August 2025**: MCP generally available
+- **May 2025**: Coding agent announcement
 
-## 🎥 Videos
+[View full changelog →](https://htekdev.github.io/copilot-visual-studio-guide/whats-new/)
 
-Video content and tutorials are available in [`src/content/videos/`](src/content/videos/).
+## 🎥 Video Library
 
-## 💻 Code Samples
+**30+ curated videos** from official sources (Microsoft Visual Studio, Visual Studio Code, GitHub), organized by pillar:
 
-Hands-on examples organized by feature:
+| Pillar | Description | Videos |
+|--------|-------------|--------|
+| 🚀 Getting Started | Introduction and setup | 5 |
+| ⚡ Autocomplete | Code completions | 2 |
+| 💬 Chat | Copilot Chat | 6 |
+| 🤖 Agent Mode | Autonomous coding | 9 |
+| 🔌 MCP | Model Context Protocol | 1 |
+| 🔍 Code Review | AI-powered review | 3 |
+| ⚙️ Advanced | NES, debugging, custom instructions | 9 |
 
-| Sample | Description |
-|--------|-------------|
-| [`samples/completions/`](samples/completions/) | Code completion examples |
-| [`samples/chat/`](samples/chat/) | Chat interaction patterns |
-| [`samples/agent-mode/`](samples/agent-mode/) | Agent Mode workflows |
-| [`samples/custom-instructions/`](samples/custom-instructions/) | Custom instruction templates |
+[Browse video library →](https://htekdev.github.io/copilot-visual-studio-guide/videos/)
+
+## 📚 Resources
+
+Curated links to official documentation and learning materials:
+
+- **Official Documentation** — Microsoft Learn, GitHub Docs
+- **Visual Studio Blog** — Copilot announcements and tutorials
+- **GitHub Blog** — Deep dives and tutorials
+- **Microsoft Learn Training** — Official training modules
+- **Community & Support** — Discussion forums and help
+
+[View all resources →](https://htekdev.github.io/copilot-visual-studio-guide/resources/)
 
 ## 🚀 Getting Started
 
@@ -87,6 +94,23 @@ The site will be available at `http://localhost:4321`.
 | `npm run build` | Build production site to `./dist/` |
 | `npm run preview` | Preview production build locally |
 
+## 🏗️ Architecture
+
+```
+src/
+├── content/
+│   └── videos/        # Video content by pillar
+├── pages/
+│   ├── index.astro    # Homepage
+│   ├── whats-new.astro # Changelog
+│   ├── videos.astro   # Video library
+│   ├── resources.astro # Resources hub
+│   └── presentations.astro
+├── components/
+│   └── Sidebar.astro  # Navigation
+└── layouts/
+```
+
 ## 🤝 Contributing
 
 Contributions are welcome! Here's how you can help:
@@ -99,21 +123,18 @@ Contributions are welcome! Here's how you can help:
 
 ### Contribution Ideas
 
-- 📝 Improve or add documentation
-- 🎥 Create video tutorials
-- 💻 Add code samples for specific scenarios
+- 🎥 Suggest new videos from official sources
+- 📋 Update changelog with new releases
+- 🔗 Add new official resource links
 - 🐛 Report issues or bugs
-- 🌐 Help with translations
 
-Please ensure your contributions follow the existing style and structure.
+## 🔗 Official Sources
 
-## 🔗 Official Resources
-
-- [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
-- [GitHub Copilot in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-install-and-states)
-- [Visual Studio Documentation](https://learn.microsoft.com/en-us/visualstudio/)
-- [GitHub Copilot Blog](https://github.blog/tag/github-copilot/)
-- [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)
+- [GitHub Copilot What's New](https://github.com/features/copilot/whats-new)
+- [GitHub Changelog (Copilot)](https://github.blog/changelog/label/copilot/)
+- [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/tag/github-copilot/)
+- [GitHub Copilot Docs](https://docs.github.com/copilot)
+- [Microsoft Learn](https://learn.microsoft.com/visualstudio/ide/visual-studio-github-copilot-get-started)
 
 ## 📄 License
 

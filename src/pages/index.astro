@@ -33,28 +33,28 @@ const features = [
 
 const quickLinks = [
   {
-    icon: '📚',
-    title: 'Documentation',
-    description: 'In-depth guides and reference material',
-    href: `${base}docs/`,
+    icon: '🆕',
+    title: "What's New",
+    description: 'Latest updates and changelog',
+    href: `${base}whats-new/`,
   },
   {
-    icon: '💻',
-    title: 'Code Samples',
-    description: 'Working examples and templates',
-    href: `${base}samples/`,
+    icon: '🎬',
+    title: 'Videos',
+    description: 'Curated tutorials by pillar',
+    href: `${base}videos/`,
+  },
+  {
+    icon: '📚',
+    title: 'Resources',
+    description: 'Official docs and learning paths',
+    href: `${base}resources/`,
   },
   {
     icon: '🎯',
     title: 'Presentations',
     description: 'Slides and talk materials',
     href: `${base}presentations/`,
-  },
-  {
-    icon: '🎬',
-    title: 'Videos',
-    description: 'Tutorials and walkthroughs',
-    href: `${base}videos/`,
   },
 ];
 ---
@@ -80,18 +80,16 @@ const quickLinks = [
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a
-            href={`${base}docs/`}
+            href={`${base}whats-new/`}
             class="px-8 py-3 bg-accent-cyan text-bg-void font-semibold rounded-lg hover:bg-accent-cyan/90 transition-colors"
           >
-            Get Started
+            What's New
           </a>
           <a
-            href="https://github.com/htekdev/copilot-visual-studio-guide"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`${base}videos/`}
             class="px-8 py-3 border border-border-default text-text-primary rounded-lg hover:border-accent-cyan hover:text-accent-cyan transition-colors"
           >
-            View on GitHub
+            Watch Videos
           </a>
         </div>
       </div>

@@ -1,0 +1,310 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+interface Resource {
+  title: string;
+  description: string;
+  url: string;
+}
+
+interface ResourceCategory {
+  title: string;
+  icon: string;
+  resources: Resource[];
+}
+
+const categories: ResourceCategory[] = [
+  {
+    title: "Official Documentation",
+    icon: "📚",
+    resources: [
+      {
+        title: "Get started with GitHub Copilot",
+        description: "Official Visual Studio guide to launching and using Copilot",
+        url: "https://learn.microsoft.com/visualstudio/ide/visual-studio-github-copilot-get-started"
+      },
+      {
+        title: "Use GitHub Copilot for free",
+        description: "Guide to the Copilot Free tier in Visual Studio",
+        url: "https://learn.microsoft.com/visualstudio/ide/copilot-free-plan"
+      },
+      {
+        title: "Copilot Agent Mode",
+        description: "Learn about autonomous multi-step coding with agent mode",
+        url: "https://learn.microsoft.com/visualstudio/ide/copilot-agent-mode"
+      },
+      {
+        title: "Copilot Next Edit Suggestions",
+        description: "Predictive edits that anticipate your next changes",
+        url: "https://learn.microsoft.com/visualstudio/ide/copilot-next-edit-suggestions"
+      },
+      {
+        title: "MCP Servers in Visual Studio",
+        description: "Extend Copilot with Model Context Protocol",
+        url: "https://learn.microsoft.com/visualstudio/ide/mcp-servers"
+      },
+      {
+        title: "GitHub Copilot Documentation",
+        description: "Comprehensive GitHub Copilot documentation",
+        url: "https://docs.github.com/copilot"
+      }
+    ]
+  },
+  {
+    title: "Visual Studio Blog",
+    icon: "📝",
+    resources: [
+      {
+        title: "Announcing a free GitHub Copilot for Visual Studio",
+        description: "Introduction to the free tier for Visual Studio users",
+        url: "https://devblogs.microsoft.com/visualstudio/announcing-a-free-github-copilot-for-visual-studio/"
+      },
+      {
+        title: "How to Install GitHub Copilot in Visual Studio",
+        description: "Step-by-step installation guide",
+        url: "https://devblogs.microsoft.com/visualstudio/how-to-install-github-copilot-in-visual-studio/"
+      },
+      {
+        title: "How to use GitHub Copilot Chat in Visual Studio",
+        description: "Guide to conversational AI assistance",
+        url: "https://devblogs.microsoft.com/visualstudio/how-to-use-github-copilot-chat-in-visual-studio/"
+      },
+      {
+        title: "Next edit suggestions available in Visual Studio",
+        description: "Learn about predictive code editing",
+        url: "https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/"
+      },
+      {
+        title: "Introducing Code Referencing for Copilot Chat",
+        description: "Transparency in AI-generated code",
+        url: "https://devblogs.microsoft.com/visualstudio/introducing-code-referencing-for-github-copilot-chat-in-visual-studio/"
+      },
+      {
+        title: "Conversational way to chat with GitHub Copilot",
+        description: "New chat interface improvements",
+        url: "https://devblogs.microsoft.com/visualstudio/conversational-way-to-chat-with-github-copilot/"
+      }
+    ]
+  },
+  {
+    title: "GitHub Blog",
+    icon: "🐙",
+    resources: [
+      {
+        title: "Agent mode 101: All about GitHub Copilot's powerful mode",
+        description: "Deep dive into agent mode capabilities",
+        url: "https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/"
+      },
+      {
+        title: "GitHub Copilot: Meet the new coding agent",
+        description: "Introduction to the autonomous coding agent",
+        url: "https://github.blog/news-insights/product-news/github-copilot-meet-the-new-coding-agent/"
+      },
+      {
+        title: "GitHub Copilot tutorial: Build, test, review, ship faster",
+        description: "Comprehensive tutorial with real prompts",
+        url: "https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/"
+      },
+      {
+        title: "Code review and refactoring with GitHub Copilot",
+        description: "Using Copilot for code quality improvements",
+        url: "https://github.blog/ai-and-ml/github-copilot/github-for-beginners-code-review-and-refactoring-with-github-copilot/"
+      },
+      {
+        title: "Building your first MCP server",
+        description: "Extend AI tools with custom capabilities",
+        url: "https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/"
+      }
+    ]
+  },
+  {
+    title: "Microsoft Learn Training",
+    icon: "🎓",
+    resources: [
+      {
+        title: "Develop code features using GitHub Copilot tools",
+        description: "1hr 14min training module",
+        url: "https://learn.microsoft.com/training/modules/develop-code-features-using-github-copilot-tools/"
+      },
+      {
+        title: "GitHub Copilot for Azure",
+        description: "Use Copilot for Azure development",
+        url: "https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started"
+      },
+      {
+        title: "Use Copilot to create WinUI apps",
+        description: "Building Windows apps with Copilot assistance",
+        url: "https://learn.microsoft.com/windows/apps/how-tos/github-copilot-winui-vs"
+      }
+    ]
+  },
+  {
+    title: "Community & Support",
+    icon: "💬",
+    resources: [
+      {
+        title: "GitHub Community - Copilot Discussions",
+        description: "Ask questions and share experiences",
+        url: "https://github.com/orgs/community/discussions/categories/copilot-conversations"
+      },
+      {
+        title: "GitHub Copilot CLI Discussions",
+        description: "CLI-specific discussions and feedback",
+        url: "https://github.com/github/copilot-cli/discussions"
+      },
+      {
+        title: "VS Code Copilot Release Issues",
+        description: "Report issues and track bugs",
+        url: "https://github.com/microsoft/vscode-copilot-release"
+      },
+      {
+        title: "Copilot in GitHub Support",
+        description: "AI-powered help for GitHub questions",
+        url: "https://support.github.com"
+      },
+      {
+        title: "Troubleshooting GitHub Copilot",
+        description: "Common issues and solutions",
+        url: "https://docs.github.com/copilot/troubleshooting-github-copilot/troubleshooting-issues-with-github-copilot-chat"
+      }
+    ]
+  },
+  {
+    title: "Official YouTube Playlists",
+    icon: "🎬",
+    resources: [
+      {
+        title: "GitHub Copilot Series",
+        description: "Official GitHub playlist",
+        url: "https://www.youtube.com/playlist?list=PLj6YeMhvp2S5_hvBl2SE-7YCHYlLQ0bPt"
+      },
+      {
+        title: "GitHub Copilot in VS Code",
+        description: "VS Code team's Copilot videos",
+        url: "https://www.youtube.com/playlist?list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg"
+      },
+      {
+        title: "GitHub Copilot for Visual Studio advocacy",
+        description: "Microsoft advocacy team videos",
+        url: "https://www.youtube.com/playlist?list=PLReL099Y5nRfLtXLW6u2dEUKjKRsI2p-Z"
+      },
+      {
+        title: "After Hours for GitHub Copilot in Visual Studio",
+        description: "Deep dive sessions",
+        url: "https://www.youtube.com/playlist?list=PLReL099Y5nRewXO72XedGQxyntVqerUy0"
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title="Resources - GitHub Copilot" description="Curated resources, documentation, and learning materials for GitHub Copilot in Visual Studio">
+  <main class="min-h-screen py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">
+          <span class="gradient-text">Resources</span>
+        </h1>
+        <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+          Curated links to official documentation, blogs, training, and community resources
+        </p>
+      </div>
+
+      <!-- Quick Access -->
+      <section class="mb-12">
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="https://github.com/features/copilot"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 bg-accent-cyan text-bg-void font-semibold rounded-lg hover:bg-accent-cyan/90 transition-colors"
+          >
+            Get GitHub Copilot
+          </a>
+          <a
+            href="https://visualstudio.microsoft.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 border border-accent-violet text-accent-violet font-semibold rounded-lg hover:bg-accent-violet/10 transition-colors"
+          >
+            Download Visual Studio
+          </a>
+          <a
+            href="https://github.com/features/copilot/whats-new"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 border border-border-default text-text-primary rounded-lg hover:border-accent-cyan hover:text-accent-cyan transition-colors"
+          >
+            What's New
+          </a>
+        </div>
+      </section>
+
+      <!-- Resource Categories -->
+      <div class="space-y-12">
+        {categories.map((category) => (
+          <section>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-3xl">{category.icon}</span>
+              <h2 class="text-2xl font-heading font-semibold text-text-primary">{category.title}</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {category.resources.map((resource) => (
+                <a
+                  href={resource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group block p-4 rounded-xl border border-border-default bg-bg-overlay hover:border-accent-cyan transition-all"
+                >
+                  <div class="flex items-start justify-between gap-2">
+                    <div>
+                      <h3 class="font-semibold text-text-primary group-hover:text-accent-cyan transition-colors mb-1">
+                        {resource.title}
+                      </h3>
+                      <p class="text-sm text-text-muted line-clamp-2">{resource.description}</p>
+                    </div>
+                    <svg class="w-4 h-4 text-text-muted group-hover:text-accent-cyan flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <!-- Footer CTA -->
+      <section class="mt-16 text-center">
+        <div class="glass rounded-xl p-8">
+          <h2 class="text-xl font-heading font-semibold text-text-primary mb-4">
+            Want to see Copilot in action?
+          </h2>
+          <p class="text-text-secondary mb-6">
+            Check out our curated video library with tutorials from Microsoft and GitHub.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href={`${base}videos/`}
+              class="inline-flex items-center gap-2 px-6 py-3 bg-accent-cyan text-bg-void font-semibold rounded-lg hover:bg-accent-cyan/90 transition-colors"
+            >
+              Watch Videos
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+            <a
+              href={`${base}whats-new/`}
+              class="inline-flex items-center gap-2 px-6 py-3 border border-border-default text-text-primary rounded-lg hover:border-accent-cyan hover:text-accent-cyan transition-colors"
+            >
+              View Changelog
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
