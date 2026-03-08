@@ -1,7 +1,7 @@
 [
   {
     "title": "Official Documentation",
-    "icon": "📚",
+    "icon": "\ud83d\udcda",
     "resources": [
       {
         "title": "Get started with GitHub Copilot",
@@ -49,7 +49,7 @@
   },
   {
     "title": "Visual Studio Blog",
-    "icon": "📝",
+    "icon": "\ud83d\udcdd",
     "resources": [
       {
         "title": "Announcing a free GitHub Copilot for Visual Studio",
@@ -92,12 +92,26 @@
         "url": "https://devblogs.microsoft.com/visualstudio/conversational-way-to-chat-with-github-copilot/",
         "isNew": false,
         "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Get started with GitHub Copilot CLI: A free, hands-on course",
+        "description": "Free hands-on course for learning Copilot CLI",
+        "url": "https://devblogs.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course",
+        "isNew": true,
+        "dateAdded": "2026-03-08"
+      },
+      {
+        "title": "GitHub Copilot Testing for .NET in Visual Studio 2026",
+        "description": "AI-powered unit testing for .NET applications",
+        "url": "https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet-available-in-visual-studio/",
+        "isNew": true,
+        "dateAdded": "2026-03-08"
       }
     ]
   },
   {
     "title": "GitHub Blog",
-    "icon": "🐙",
+    "icon": "\ud83d\udc19",
     "resources": [
       {
         "title": "Agent mode 101: All about GitHub Copilot's powerful mode",
@@ -133,12 +147,26 @@
         "url": "https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/",
         "isNew": false,
         "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "What's new with GitHub Copilot coding agent",
+        "description": "Latest updates to Copilot's autonomous coding capabilities",
+        "url": "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/",
+        "isNew": true,
+        "dateAdded": "2026-03-08"
+      },
+      {
+        "title": "From idea to pull request with GitHub Copilot CLI",
+        "description": "Practical guide to building with Copilot CLI",
+        "url": "https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/",
+        "isNew": true,
+        "dateAdded": "2026-03-08"
       }
     ]
   },
   {
     "title": "Microsoft Learn Training",
-    "icon": "🎓",
+    "icon": "\ud83c\udf93",
     "resources": [
       {
         "title": "Develop code features using GitHub Copilot tools",
@@ -160,12 +188,40 @@
         "url": "https://learn.microsoft.com/windows/apps/how-tos/github-copilot-winui-vs",
         "isNew": false,
         "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Introduction to GitHub Copilot",
+        "description": "Beginner module on GitHub Copilot fundamentals",
+        "url": "https://learn.microsoft.com/training/modules/introduction-to-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-03-08"
+      },
+      {
+        "title": "Get Started with GitHub Copilot",
+        "description": "Hands-on module for getting started with Copilot",
+        "url": "https://learn.microsoft.com/training/modules/get-started-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-03-08"
+      },
+      {
+        "title": "Introduction to prompt engineering with GitHub Copilot",
+        "description": "Learn effective prompt techniques for Copilot",
+        "url": "https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-03-08"
+      },
+      {
+        "title": "GitHub Copilot Across Environments",
+        "description": "IDE, Chat, and Command Line techniques",
+        "url": "https://learn.microsoft.com/training/modules/github-copilot-across-environments/",
+        "isNew": true,
+        "dateAdded": "2026-03-08"
       }
     ]
   },
   {
     "title": "Community & Support",
-    "icon": "💬",
+    "icon": "\ud83d\udcac",
     "resources": [
       {
         "title": "GitHub Community - Copilot Discussions",
@@ -206,7 +262,7 @@
   },
   {
     "title": "Official YouTube Playlists",
-    "icon": "🎬",
+    "icon": "\ud83c\udfac",
     "resources": [
       {
         "title": "GitHub Copilot Series",
