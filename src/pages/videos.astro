@@ -82,9 +82,16 @@ const videosByPillar = pillars.map(pillar => ({
                       {video.data.order}
                     </span>
                   )}
-                  <h3 class="font-semibold text-text-primary group-hover:text-accent-cyan transition-colors mb-2 line-clamp-2">
-                    {video.data.title}
-                  </h3>
+                  <div class="flex items-center gap-2 mb-2">
+                    <h3 class="font-semibold text-text-primary group-hover:text-accent-cyan transition-colors line-clamp-2">
+                      {video.data.title}
+                    </h3>
+                    {video.data.isNew && (
+                      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-accent-cyan/15 text-accent-cyan border border-accent-cyan/30 flex-shrink-0">
+                        New
+                      </span>
+                    )}
+                  </div>
                   <p class="text-sm text-text-secondary mb-3 line-clamp-2">{video.data.description}</p>
                   <div class="flex items-center gap-3 text-xs text-text-muted">
                     {video.data.duration && (

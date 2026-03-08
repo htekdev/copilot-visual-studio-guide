@@ -1,0 +1,59 @@
+name: Auto-merge Bot PRs
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'  # Weekly on Sundays at 6:00 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge automation PRs
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT_PR_MERGER }}
+        run: |
+          echo "🔍 Finding open automation PRs by github-actions..."
+          
+          prs=$(gh pr list \
+            --repo "${{ github.repository }}" \
+            --author "app/github-actions" \
+            --label "automation" \
+            --state open \
+            --json number,title,isDraft \
+            --jq '.[] | select(.isDraft == false) | .number')
+          
+          if [ -z "$prs" ]; then
+            echo "✅ No open automation PRs to merge."
+            exit 0
+          fi
+          
+          echo "📋 Found PRs to merge:"
+          echo "$prs"
+          
+          merged=0
+          failed=0
+          
+          for pr in $prs; do
+            echo ""
+            echo "🔄 Attempting to merge PR #$pr..."
+            
+            if gh pr merge "$pr" \
+              --repo "${{ github.repository }}" \
+              --squash \
+              --auto \
+              --delete-branch; then
+              echo "✅ PR #$pr merged successfully"
+              merged=$((merged + 1))
+            else
+              echo "⚠️ PR #$pr could not be merged (may need reviews or checks)"
+              failed=$((failed + 1))
+            fi
+          done
+          
+          echo ""
+          echo "📊 Summary: $merged merged, $failed failed"

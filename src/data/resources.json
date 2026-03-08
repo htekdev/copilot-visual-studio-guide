@@ -1,0 +1,241 @@
+[
+  {
+    "title": "Official Documentation",
+    "icon": "📚",
+    "resources": [
+      {
+        "title": "Get started with GitHub Copilot",
+        "description": "Official Visual Studio guide to launching and using Copilot",
+        "url": "https://learn.microsoft.com/visualstudio/ide/visual-studio-github-copilot-get-started",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Use GitHub Copilot for free",
+        "description": "Guide to the Copilot Free tier in Visual Studio",
+        "url": "https://learn.microsoft.com/visualstudio/ide/copilot-free-plan",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Copilot Agent Mode",
+        "description": "Learn about autonomous multi-step coding with agent mode",
+        "url": "https://learn.microsoft.com/visualstudio/ide/copilot-agent-mode",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Copilot Next Edit Suggestions",
+        "description": "Predictive edits that anticipate your next changes",
+        "url": "https://learn.microsoft.com/visualstudio/ide/copilot-next-edit-suggestions",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "MCP Servers in Visual Studio",
+        "description": "Extend Copilot with Model Context Protocol",
+        "url": "https://learn.microsoft.com/visualstudio/ide/mcp-servers",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "GitHub Copilot Documentation",
+        "description": "Comprehensive GitHub Copilot documentation",
+        "url": "https://docs.github.com/copilot",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      }
+    ]
+  },
+  {
+    "title": "Visual Studio Blog",
+    "icon": "📝",
+    "resources": [
+      {
+        "title": "Announcing a free GitHub Copilot for Visual Studio",
+        "description": "Introduction to the free tier for Visual Studio users",
+        "url": "https://devblogs.microsoft.com/visualstudio/announcing-a-free-github-copilot-for-visual-studio/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "How to Install GitHub Copilot in Visual Studio",
+        "description": "Step-by-step installation guide",
+        "url": "https://devblogs.microsoft.com/visualstudio/how-to-install-github-copilot-in-visual-studio/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "How to use GitHub Copilot Chat in Visual Studio",
+        "description": "Guide to conversational AI assistance",
+        "url": "https://devblogs.microsoft.com/visualstudio/how-to-use-github-copilot-chat-in-visual-studio/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Next edit suggestions available in Visual Studio",
+        "description": "Learn about predictive code editing",
+        "url": "https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Introducing Code Referencing for Copilot Chat",
+        "description": "Transparency in AI-generated code",
+        "url": "https://devblogs.microsoft.com/visualstudio/introducing-code-referencing-for-github-copilot-chat-in-visual-studio/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Conversational way to chat with GitHub Copilot",
+        "description": "New chat interface improvements",
+        "url": "https://devblogs.microsoft.com/visualstudio/conversational-way-to-chat-with-github-copilot/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      }
+    ]
+  },
+  {
+    "title": "GitHub Blog",
+    "icon": "🐙",
+    "resources": [
+      {
+        "title": "Agent mode 101: All about GitHub Copilot's powerful mode",
+        "description": "Deep dive into agent mode capabilities",
+        "url": "https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "GitHub Copilot: Meet the new coding agent",
+        "description": "Introduction to the autonomous coding agent",
+        "url": "https://github.blog/news-insights/product-news/github-copilot-meet-the-new-coding-agent/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "GitHub Copilot tutorial: Build, test, review, ship faster",
+        "description": "Comprehensive tutorial with real prompts",
+        "url": "https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Code review and refactoring with GitHub Copilot",
+        "description": "Using Copilot for code quality improvements",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-for-beginners-code-review-and-refactoring-with-github-copilot/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Building your first MCP server",
+        "description": "Extend AI tools with custom capabilities",
+        "url": "https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      }
+    ]
+  },
+  {
+    "title": "Microsoft Learn Training",
+    "icon": "🎓",
+    "resources": [
+      {
+        "title": "Develop code features using GitHub Copilot tools",
+        "description": "1hr 14min training module",
+        "url": "https://learn.microsoft.com/training/modules/develop-code-features-using-github-copilot-tools/",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "GitHub Copilot for Azure",
+        "description": "Use Copilot for Azure development",
+        "url": "https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Use Copilot to create WinUI apps",
+        "description": "Building Windows apps with Copilot assistance",
+        "url": "https://learn.microsoft.com/windows/apps/how-tos/github-copilot-winui-vs",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      }
+    ]
+  },
+  {
+    "title": "Community & Support",
+    "icon": "💬",
+    "resources": [
+      {
+        "title": "GitHub Community - Copilot Discussions",
+        "description": "Ask questions and share experiences",
+        "url": "https://github.com/orgs/community/discussions/categories/copilot-conversations",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "GitHub Copilot CLI Discussions",
+        "description": "CLI-specific discussions and feedback",
+        "url": "https://github.com/github/copilot-cli/discussions",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "VS Code Copilot Release Issues",
+        "description": "Report issues and track bugs",
+        "url": "https://github.com/microsoft/vscode-copilot-release",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Copilot in GitHub Support",
+        "description": "AI-powered help for GitHub questions",
+        "url": "https://support.github.com",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Troubleshooting GitHub Copilot",
+        "description": "Common issues and solutions",
+        "url": "https://docs.github.com/copilot/troubleshooting-github-copilot/troubleshooting-issues-with-github-copilot-chat",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      }
+    ]
+  },
+  {
+    "title": "Official YouTube Playlists",
+    "icon": "🎬",
+    "resources": [
+      {
+        "title": "GitHub Copilot Series",
+        "description": "Official GitHub playlist",
+        "url": "https://www.youtube.com/playlist?list=PLj6YeMhvp2S5_hvBl2SE-7YCHYlLQ0bPt",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "GitHub Copilot in VS Code",
+        "description": "VS Code team's Copilot videos",
+        "url": "https://www.youtube.com/playlist?list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "GitHub Copilot for Visual Studio advocacy",
+        "description": "Microsoft advocacy team videos",
+        "url": "https://www.youtube.com/playlist?list=PLReL099Y5nRfLtXLW6u2dEUKjKRsI2p-Z",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "After Hours for GitHub Copilot in Visual Studio",
+        "description": "Deep dive sessions",
+        "url": "https://www.youtube.com/playlist?list=PLReL099Y5nRewXO72XedGQxyntVqerUy0",
+        "isNew": false,
+        "dateAdded": "2025-01-01"
+      }
+    ]
+  }
+]

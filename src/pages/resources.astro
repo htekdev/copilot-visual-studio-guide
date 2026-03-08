@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import categoriesData from '../data/resources.json';
 
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
@@ -7,6 +8,8 @@ interface Resource {
   title: string;
   description: string;
   url: string;
+  isNew?: boolean;
+  dateAdded?: string;
 }
 
 interface ResourceCategory {
@@ -15,189 +18,7 @@ interface ResourceCategory {
   resources: Resource[];
 }
 
-const categories: ResourceCategory[] = [
-  {
-    title: "Official Documentation",
-    icon: "📚",
-    resources: [
-      {
-        title: "Get started with GitHub Copilot",
-        description: "Official Visual Studio guide to launching and using Copilot",
-        url: "https://learn.microsoft.com/visualstudio/ide/visual-studio-github-copilot-get-started"
-      },
-      {
-        title: "Use GitHub Copilot for free",
-        description: "Guide to the Copilot Free tier in Visual Studio",
-        url: "https://learn.microsoft.com/visualstudio/ide/copilot-free-plan"
-      },
-      {
-        title: "Copilot Agent Mode",
-        description: "Learn about autonomous multi-step coding with agent mode",
-        url: "https://learn.microsoft.com/visualstudio/ide/copilot-agent-mode"
-      },
-      {
-        title: "Copilot Next Edit Suggestions",
-        description: "Predictive edits that anticipate your next changes",
-        url: "https://learn.microsoft.com/visualstudio/ide/copilot-next-edit-suggestions"
-      },
-      {
-        title: "MCP Servers in Visual Studio",
-        description: "Extend Copilot with Model Context Protocol",
-        url: "https://learn.microsoft.com/visualstudio/ide/mcp-servers"
-      },
-      {
-        title: "GitHub Copilot Documentation",
-        description: "Comprehensive GitHub Copilot documentation",
-        url: "https://docs.github.com/copilot"
-      }
-    ]
-  },
-  {
-    title: "Visual Studio Blog",
-    icon: "📝",
-    resources: [
-      {
-        title: "Announcing a free GitHub Copilot for Visual Studio",
-        description: "Introduction to the free tier for Visual Studio users",
-        url: "https://devblogs.microsoft.com/visualstudio/announcing-a-free-github-copilot-for-visual-studio/"
-      },
-      {
-        title: "How to Install GitHub Copilot in Visual Studio",
-        description: "Step-by-step installation guide",
-        url: "https://devblogs.microsoft.com/visualstudio/how-to-install-github-copilot-in-visual-studio/"
-      },
-      {
-        title: "How to use GitHub Copilot Chat in Visual Studio",
-        description: "Guide to conversational AI assistance",
-        url: "https://devblogs.microsoft.com/visualstudio/how-to-use-github-copilot-chat-in-visual-studio/"
-      },
-      {
-        title: "Next edit suggestions available in Visual Studio",
-        description: "Learn about predictive code editing",
-        url: "https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/"
-      },
-      {
-        title: "Introducing Code Referencing for Copilot Chat",
-        description: "Transparency in AI-generated code",
-        url: "https://devblogs.microsoft.com/visualstudio/introducing-code-referencing-for-github-copilot-chat-in-visual-studio/"
-      },
-      {
-        title: "Conversational way to chat with GitHub Copilot",
-        description: "New chat interface improvements",
-        url: "https://devblogs.microsoft.com/visualstudio/conversational-way-to-chat-with-github-copilot/"
-      }
-    ]
-  },
-  {
-    title: "GitHub Blog",
-    icon: "🐙",
-    resources: [
-      {
-        title: "Agent mode 101: All about GitHub Copilot's powerful mode",
-        description: "Deep dive into agent mode capabilities",
-        url: "https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/"
-      },
-      {
-        title: "GitHub Copilot: Meet the new coding agent",
-        description: "Introduction to the autonomous coding agent",
-        url: "https://github.blog/news-insights/product-news/github-copilot-meet-the-new-coding-agent/"
-      },
-      {
-        title: "GitHub Copilot tutorial: Build, test, review, ship faster",
-        description: "Comprehensive tutorial with real prompts",
-        url: "https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/"
-      },
-      {
-        title: "Code review and refactoring with GitHub Copilot",
-        description: "Using Copilot for code quality improvements",
-        url: "https://github.blog/ai-and-ml/github-copilot/github-for-beginners-code-review-and-refactoring-with-github-copilot/"
-      },
-      {
-        title: "Building your first MCP server",
-        description: "Extend AI tools with custom capabilities",
-        url: "https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/"
-      }
-    ]
-  },
-  {
-    title: "Microsoft Learn Training",
-    icon: "🎓",
-    resources: [
-      {
-        title: "Develop code features using GitHub Copilot tools",
-        description: "1hr 14min training module",
-        url: "https://learn.microsoft.com/training/modules/develop-code-features-using-github-copilot-tools/"
-      },
-      {
-        title: "GitHub Copilot for Azure",
-        description: "Use Copilot for Azure development",
-        url: "https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started"
-      },
-      {
-        title: "Use Copilot to create WinUI apps",
-        description: "Building Windows apps with Copilot assistance",
-        url: "https://learn.microsoft.com/windows/apps/how-tos/github-copilot-winui-vs"
-      }
-    ]
-  },
-  {
-    title: "Community & Support",
-    icon: "💬",
-    resources: [
-      {
-        title: "GitHub Community - Copilot Discussions",
-        description: "Ask questions and share experiences",
-        url: "https://github.com/orgs/community/discussions/categories/copilot-conversations"
-      },
-      {
-        title: "GitHub Copilot CLI Discussions",
-        description: "CLI-specific discussions and feedback",
-        url: "https://github.com/github/copilot-cli/discussions"
-      },
-      {
-        title: "VS Code Copilot Release Issues",
-        description: "Report issues and track bugs",
-        url: "https://github.com/microsoft/vscode-copilot-release"
-      },
-      {
-        title: "Copilot in GitHub Support",
-        description: "AI-powered help for GitHub questions",
-        url: "https://support.github.com"
-      },
-      {
-        title: "Troubleshooting GitHub Copilot",
-        description: "Common issues and solutions",
-        url: "https://docs.github.com/copilot/troubleshooting-github-copilot/troubleshooting-issues-with-github-copilot-chat"
-      }
-    ]
-  },
-  {
-    title: "Official YouTube Playlists",
-    icon: "🎬",
-    resources: [
-      {
-        title: "GitHub Copilot Series",
-        description: "Official GitHub playlist",
-        url: "https://www.youtube.com/playlist?list=PLj6YeMhvp2S5_hvBl2SE-7YCHYlLQ0bPt"
-      },
-      {
-        title: "GitHub Copilot in VS Code",
-        description: "VS Code team's Copilot videos",
-        url: "https://www.youtube.com/playlist?list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg"
-      },
-      {
-        title: "GitHub Copilot for Visual Studio advocacy",
-        description: "Microsoft advocacy team videos",
-        url: "https://www.youtube.com/playlist?list=PLReL099Y5nRfLtXLW6u2dEUKjKRsI2p-Z"
-      },
-      {
-        title: "After Hours for GitHub Copilot in Visual Studio",
-        description: "Deep dive sessions",
-        url: "https://www.youtube.com/playlist?list=PLReL099Y5nRewXO72XedGQxyntVqerUy0"
-      }
-    ]
-  }
-];
+const categories: ResourceCategory[] = categoriesData;
 ---
 
 <BaseLayout title="Resources - GitHub Copilot" description="Curated resources, documentation, and learning materials for GitHub Copilot in Visual Studio">
@@ -261,9 +82,16 @@ const categories: ResourceCategory[] = [
                 >
                   <div class="flex items-start justify-between gap-2">
                     <div>
-                      <h3 class="font-semibold text-text-primary group-hover:text-accent-cyan transition-colors mb-1">
-                        {resource.title}
-                      </h3>
+                      <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-semibold text-text-primary group-hover:text-accent-cyan transition-colors">
+                          {resource.title}
+                        </h3>
+                        {resource.isNew && (
+                          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-accent-cyan/15 text-accent-cyan border border-accent-cyan/30">
+                            New
+                          </span>
+                        )}
+                      </div>
                       <p class="text-sm text-text-muted line-clamp-2">{resource.description}</p>
                     </div>
                     <svg class="w-4 h-4 text-text-muted group-hover:text-accent-cyan flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

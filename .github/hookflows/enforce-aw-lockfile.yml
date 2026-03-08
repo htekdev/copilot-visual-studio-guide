@@ -1,0 +1,60 @@
+name: Enforce Agentic Workflow Lock Files
+description: Blocks commits of .github/workflows/*.md agentic workflow files without their compiled .lock.yml counterpart
+lifecycle: pre
+
+on:
+  commit:
+    paths:
+      - '.github/workflows/*.md'
+
+blocking: true
+
+steps:
+  - name: Check for accompanying lock files
+    run: |
+      Write-Host "🔍 Checking that agentic workflow files have compiled lock files..."
+      
+      $stagedFiles = git diff --cached --name-only 2>$null
+      if (-not $stagedFiles) {
+        Write-Host "⚠️ No staged files found — skipping"
+        exit 0
+      }
+      
+      $mdFiles = $stagedFiles | Where-Object { $_ -match '^\.github/workflows/.*\.md$' }
+      
+      if (-not $mdFiles -or $mdFiles.Count -eq 0) {
+        Write-Host "✅ No agentic workflow files in commit — skipping"
+        exit 0
+      }
+      
+      Write-Host "  Agentic workflow files found: $($mdFiles.Count)"
+      foreach ($f in $mdFiles) {
+        Write-Host "    - $f"
+      }
+      
+      $missingLocks = @()
+      foreach ($mdFile in $mdFiles) {
+        $lockFile = $mdFile -replace '\.md$', '.lock.yml'
+        if ($stagedFiles -notcontains $lockFile) {
+          $missingLocks += @{
+            md = $mdFile
+            lock = $lockFile
+          }
+        }
+      }
+      
+      if ($missingLocks.Count -gt 0) {
+        Write-Host ""
+        Write-Host "❌ BLOCKED: Agentic workflow files without compiled lock files"
+        Write-Host ""
+        foreach ($item in $missingLocks) {
+          Write-Host "  Source:       $($item.md)"
+          Write-Host "  Missing lock: $($item.lock)"
+          Write-Host ""
+        }
+        Write-Host "Run 'gh aw compile' to generate lock files, then stage both the .md and .lock.yml."
+        exit 1
+      }
+      
+      Write-Host "✅ All agentic workflow files have compiled lock files"
+    timeout: 30

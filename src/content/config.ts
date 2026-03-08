@@ -11,7 +11,8 @@ const videos = defineCollection({
     pillar: z.enum(['getting-started', 'completions', 'chat', 'edits', 'agent-mode', 'mcp', 'debugging', 'advanced']),
     date: z.string().optional(),
     thumbnail: z.string().optional(),
-    order: z.number().optional(), // Learning path order within pillar
+    order: z.number().optional(),
+    isNew: z.boolean().optional(),
   }),
 });
 
