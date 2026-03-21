@@ -1,7 +1,7 @@
 [
   {
     "title": "Official Documentation",
-    "icon": "📚",
+    "icon": "\ud83d\udcda",
     "resources": [
       {
         "title": "Get started with GitHub Copilot",
@@ -49,7 +49,7 @@
   },
   {
     "title": "Visual Studio Blog",
-    "icon": "📝",
+    "icon": "\ud83d\udcdd",
     "resources": [
       {
         "title": "Announcing a free GitHub Copilot for Visual Studio",
@@ -141,12 +141,19 @@
         "url": "https://devblogs.microsoft.com/blog/github-copilot-dev-days",
         "isNew": true,
         "dateAdded": "2026-03-14"
+      },
+      {
+        "title": "Azure DevOps Remote MCP Server (public preview)",
+        "description": "Use Azure DevOps data in Copilot with remote MCP server",
+        "url": "https://devblogs.microsoft.com/devops/azure-devops-remote-mcp-server-public-preview/",
+        "isNew": true,
+        "dateAdded": "2026-03-21"
       }
     ]
   },
   {
     "title": "GitHub Blog",
-    "icon": "🐙",
+    "icon": "\ud83d\udc19",
     "resources": [
       {
         "title": "Agent mode 101: All about GitHub Copilot's powerful mode",
@@ -208,7 +215,7 @@
   },
   {
     "title": "Microsoft Learn Training",
-    "icon": "🎓",
+    "icon": "\ud83c\udf93",
     "resources": [
       {
         "title": "Develop code features using GitHub Copilot tools",
@@ -284,7 +291,7 @@
   },
   {
     "title": "Community & Support",
-    "icon": "💬",
+    "icon": "\ud83d\udcac",
     "resources": [
       {
         "title": "GitHub Community - Copilot Discussions",
@@ -320,12 +327,19 @@
         "url": "https://docs.github.com/copilot/troubleshooting-github-copilot/troubleshooting-issues-with-github-copilot-chat",
         "isNew": false,
         "dateAdded": "2025-01-01"
+      },
+      {
+        "title": "Visual Studio Developer Community",
+        "description": "Official forum for reporting issues and feedback",
+        "url": "https://developercommunity.visualstudio.com/",
+        "isNew": true,
+        "dateAdded": "2026-03-21"
       }
     ]
   },
   {
     "title": "Official YouTube Playlists",
-    "icon": "🎬",
+    "icon": "\ud83c\udfac",
     "resources": [
       {
         "title": "GitHub Copilot Series",
