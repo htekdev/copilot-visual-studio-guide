@@ -1,7 +1,7 @@
 [
   {
     "title": "Official Documentation",
-    "icon": "\ud83d\udcda",
+    "icon": "📚",
     "resources": [
       {
         "title": "Get started with GitHub Copilot",
@@ -49,7 +49,7 @@
   },
   {
     "title": "Visual Studio Blog",
-    "icon": "\ud83d\udcdd",
+    "icon": "📝",
     "resources": [
       {
         "title": "Announcing a free GitHub Copilot for Visual Studio",
@@ -97,14 +97,14 @@
         "title": "Get started with GitHub Copilot CLI: A free, hands-on course",
         "description": "Free hands-on course for learning Copilot CLI",
         "url": "https://devblogs.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-08"
       },
       {
         "title": "GitHub Copilot Testing for .NET in Visual Studio 2026",
         "description": "AI-powered unit testing for .NET applications",
         "url": "https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet-available-in-visual-studio/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-08"
       },
       {
@@ -148,12 +148,26 @@
         "url": "https://devblogs.microsoft.com/devops/azure-devops-remote-mcp-server-public-preview/",
         "isNew": true,
         "dateAdded": "2026-03-21"
+      },
+      {
+        "title": "Agentic Platform Engineering with GitHub Copilot",
+        "description": "Infrastructure automation with Copilot agents",
+        "url": "https://devblogs.microsoft.com/all-things-azure/agentic-platform-engineering-with-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "MSSQL Extension for VS Code v1.41",
+        "description": "SQL development with Copilot integration",
+        "url": "https://devblogs.microsoft.com/azure-sql/vscode-mssql-march-2026/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
       }
     ]
   },
   {
     "title": "GitHub Blog",
-    "icon": "\ud83d\udc19",
+    "icon": "🐙",
     "resources": [
       {
         "title": "Agent mode 101: All about GitHub Copilot's powerful mode",
@@ -194,14 +208,14 @@
         "title": "What's new with GitHub Copilot coding agent",
         "description": "Latest updates to Copilot's autonomous coding capabilities",
         "url": "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-08"
       },
       {
         "title": "From idea to pull request with GitHub Copilot CLI",
         "description": "Practical guide to building with Copilot CLI",
         "url": "https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-08"
       },
       {
@@ -210,12 +224,54 @@
         "url": "https://github.blog/changelog/2026-02-17-delegate-tasks-to-copilot-coding-agent-from-visual-studio",
         "isNew": true,
         "dateAdded": "2026-03-14"
+      },
+      {
+        "title": "Secret scanning in AI coding agents via GitHub MCP Server",
+        "description": "Detect exposed secrets before committing",
+        "url": "https://github.blog/changelog/2026-03-17-secret-scanning-in-ai-coding-agents-via-the-github-mcp-server/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio — February update",
+        "description": "Expanded agent capabilities and smarter completions",
+        "url": "https://github.blog/changelog/2026-03-04-github-copilot-in-visual-studio-february-update",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "Copilot coding agent works faster with semantic code search",
+        "description": "Find code based on meaning, not exact text matches",
+        "url": "https://github.blog/changelog/2026-03-17-copilot-coding-agent-works-faster-with-semantic-code-search/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "Copilot code review now runs on agentic architecture",
+        "description": "AI-powered code review with tool-calling agents",
+        "url": "https://github.blog/changelog/2026-03-05-copilot-code-review-now-runs-on-an-agentic-architecture",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "More visibility into Copilot coding agent sessions",
+        "description": "View agent session logs and understand Copilot's work",
+        "url": "https://github.blog/changelog/2026-03-19-more-visibility-into-copilot-coding-agent-sessions",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "Manage Copilot coding agent repository access via API",
+        "description": "Programmatic control over agent access at scale",
+        "url": "https://github.blog/changelog/2026-03-24-manage-copilot-coding-agent-repository-access-via-the-api",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
       }
     ]
   },
   {
     "title": "Microsoft Learn Training",
-    "icon": "\ud83c\udf93",
+    "icon": "🎓",
     "resources": [
       {
         "title": "Develop code features using GitHub Copilot tools",
@@ -242,28 +298,28 @@
         "title": "Introduction to GitHub Copilot",
         "description": "Beginner module on GitHub Copilot fundamentals",
         "url": "https://learn.microsoft.com/training/modules/introduction-to-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-08"
       },
       {
         "title": "Get Started with GitHub Copilot",
         "description": "Hands-on module for getting started with Copilot",
         "url": "https://learn.microsoft.com/training/modules/get-started-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-08"
       },
       {
         "title": "Introduction to prompt engineering with GitHub Copilot",
         "description": "Learn effective prompt techniques for Copilot",
         "url": "https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-08"
       },
       {
         "title": "GitHub Copilot Across Environments",
         "description": "IDE, Chat, and Command Line techniques",
         "url": "https://learn.microsoft.com/training/modules/github-copilot-across-environments/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-08"
       },
       {
@@ -286,12 +342,54 @@
         "url": "https://learn.microsoft.com/training/modules/advanced-github-copilot/",
         "isNew": true,
         "dateAdded": "2026-03-14"
+      },
+      {
+        "title": "Accelerate app development with GitHub Copilot",
+        "description": "5-module learning path for intermediate developers",
+        "url": "https://learn.microsoft.com/training/paths/accelerate-app-development-using-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "GitHub Copilot Fundamentals Part 1",
+        "description": "Foundational learning path for Copilot",
+        "url": "https://learn.microsoft.com/training/paths/copilot/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "GitHub Copilot Fundamentals Part 2",
+        "description": "Advanced fundamentals learning path",
+        "url": "https://learn.microsoft.com/training/paths/gh-copilot-2/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "Using GitHub Copilot with Python",
+        "description": "Python-specific Copilot training module",
+        "url": "https://learn.microsoft.com/training/modules/introduction-copilot-python/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "Using GitHub Copilot with JavaScript",
+        "description": "JavaScript-specific Copilot training module",
+        "url": "https://learn.microsoft.com/training/modules/introduction-copilot-javascript/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "Introduction to GitHub Copilot Enterprise",
+        "description": "Enterprise features and administration",
+        "url": "https://learn.microsoft.com/training/modules/introduction-to-github-copilot-enterprise/",
+        "isNew": true,
+        "dateAdded": "2026-03-28"
       }
     ]
   },
   {
     "title": "Community & Support",
-    "icon": "\ud83d\udcac",
+    "icon": "💬",
     "resources": [
       {
         "title": "GitHub Community - Copilot Discussions",
@@ -339,7 +437,7 @@
   },
   {
     "title": "Official YouTube Playlists",
-    "icon": "\ud83c\udfac",
+    "icon": "🎬",
     "resources": [
       {
         "title": "GitHub Copilot Series",
