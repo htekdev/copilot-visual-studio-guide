@@ -111,35 +111,35 @@
         "title": "Custom Agents in Visual Studio",
         "description": "Build preset and custom agents for your workflow",
         "url": "https://devblogs.microsoft.com/visualstudio/custom-agents-in-visual-studio-built-in-and-build-your-own-agents/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
         "title": "Visual Studio February Update",
         "description": "Latest IDE improvements including custom agents",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-february-update/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
         "title": "Modernize .NET Anywhere with GitHub Copilot",
         "description": "Cross-platform .NET modernization with Copilot",
         "url": "https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
         "title": "Extend your coding agent with .NET Skills",
         "description": "Create reusable behaviors for Copilot agents",
         "url": "https://devblogs.microsoft.com/dotnet/extend-your-coding-agent-with-dotnet-skills/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
         "title": "GitHub Copilot Dev Days",
         "description": "Build faster with Copilot CLI, VS Code & Visual Studio",
         "url": "https://devblogs.microsoft.com/blog/github-copilot-dev-days",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
@@ -162,6 +162,41 @@
         "url": "https://devblogs.microsoft.com/azure-sql/vscode-mssql-march-2026/",
         "isNew": true,
         "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "Visual Studio March Update - Build Your Own Custom Agents",
+        "description": "Latest enhancements to custom agent capabilities",
+        "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-march-update-build-your-own-custom-agents/",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "Awesome GitHub Copilot Resources",
+        "description": "Centralized hub for Copilot customizations and plugins",
+        "url": "https://devblogs.microsoft.com/blog/awesome-github-copilot-just-got-a-website-and-a-learning-hub-and-plugins",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "Microsoft Agent Framework Version 1.0",
+        "description": "Production-ready framework for building AI agents in .NET/Python",
+        "url": "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "Dataverse Skills: Your Coding Agent Now Speaks Dataverse",
+        "description": "Build Power Platform solutions with AI agent support",
+        "url": "https://devblogs.microsoft.com/powerplatform/dataverse-skills-your-coding-agent-now-speaks-dataverse/",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "Ten Months with Copilot Coding Agent in dotnet/runtime",
+        "description": "Real-world experience using Copilot agents at scale",
+        "url": "https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
       }
     ]
   },
@@ -266,6 +301,34 @@
         "url": "https://github.blog/changelog/2026-03-24-manage-copilot-coding-agent-repository-access-via-the-api",
         "isNew": true,
         "dateAdded": "2026-03-28"
+      },
+      {
+        "title": "Research, plan, and code with Copilot cloud agent",
+        "description": "Expanded agent capabilities beyond pull request workflows",
+        "url": "https://github.blog/changelog/2026-03-31-research-plan-and-code-with-copilot-cloud-agent",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "Run multiple agents at once with /fleet in Copilot CLI",
+        "description": "Parallel agent execution for multi-file tasks",
+        "url": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "Agent-driven development in Copilot Applied Science",
+        "description": "How GitHub's AI team uses agents internally",
+        "url": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "Under the hood: Security architecture of GitHub Agentic Workflows",
+        "description": "Deep dive into agent security and sandboxing",
+        "url": "https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/",
+        "isNew": true,
+        "dateAdded": "2026-04-04"
       }
     ]
   },
@@ -326,21 +389,21 @@
         "title": "Developer use cases for AI with GitHub Copilot",
         "description": "Practical scenarios and use cases",
         "url": "https://learn.microsoft.com/training/modules/developer-use-cases-for-ai-with-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
         "title": "Implement Code Improvements using GitHub Copilot Tools",
         "description": "Refactoring and code quality improvements",
         "url": "https://learn.microsoft.com/training/modules/implement-code-improvements-using-github-copilot-tools/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
         "title": "Using advanced GitHub Copilot features",
         "description": "Master advanced Copilot capabilities",
         "url": "https://learn.microsoft.com/training/modules/advanced-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
