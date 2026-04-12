@@ -146,7 +146,7 @@
         "title": "Azure DevOps Remote MCP Server (public preview)",
         "description": "Use Azure DevOps data in Copilot with remote MCP server",
         "url": "https://devblogs.microsoft.com/devops/azure-devops-remote-mcp-server-public-preview/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-21"
       },
       {
@@ -197,6 +197,20 @@
         "url": "https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/",
         "isNew": true,
         "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "Announcing Azure MCP Server 2.0 Stable Release",
+        "description": "Self-hosted remote MCP server for Azure resource management",
+        "url": "https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-2-0-stable-release",
+        "isNew": true,
+        "dateAdded": "2026-04-11"
+      },
+      {
+        "title": "Agentic development with .NET Aspire",
+        "description": "Build, run, and observe agentic workflows with .NET Aspire",
+        "url": "https://devblogs.microsoft.com/aspire/agentic-dev-aspirations/",
+        "isNew": true,
+        "dateAdded": "2026-04-11"
       }
     ]
   },
@@ -493,7 +507,7 @@
         "title": "Visual Studio Developer Community",
         "description": "Official forum for reporting issues and feedback",
         "url": "https://developercommunity.visualstudio.com/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-21"
       }
     ]
