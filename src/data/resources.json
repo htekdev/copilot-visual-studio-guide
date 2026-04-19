@@ -153,49 +153,49 @@
         "title": "Agentic Platform Engineering with GitHub Copilot",
         "description": "Infrastructure automation with Copilot agents",
         "url": "https://devblogs.microsoft.com/all-things-azure/agentic-platform-engineering-with-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "MSSQL Extension for VS Code v1.41",
         "description": "SQL development with Copilot integration",
         "url": "https://devblogs.microsoft.com/azure-sql/vscode-mssql-march-2026/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "Visual Studio March Update - Build Your Own Custom Agents",
         "description": "Latest enhancements to custom agent capabilities",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-march-update-build-your-own-custom-agents/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
       },
       {
         "title": "Awesome GitHub Copilot Resources",
         "description": "Centralized hub for Copilot customizations and plugins",
         "url": "https://devblogs.microsoft.com/blog/awesome-github-copilot-just-got-a-website-and-a-learning-hub-and-plugins",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
       },
       {
         "title": "Microsoft Agent Framework Version 1.0",
         "description": "Production-ready framework for building AI agents in .NET/Python",
         "url": "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
       },
       {
         "title": "Dataverse Skills: Your Coding Agent Now Speaks Dataverse",
         "description": "Build Power Platform solutions with AI agent support",
         "url": "https://devblogs.microsoft.com/powerplatform/dataverse-skills-your-coding-agent-now-speaks-dataverse/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
       },
       {
         "title": "Ten Months with Copilot Coding Agent in dotnet/runtime",
         "description": "Real-world experience using Copilot agents at scale",
         "url": "https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
       },
       {
@@ -211,6 +211,20 @@
         "url": "https://devblogs.microsoft.com/aspire/agentic-dev-aspirations/",
         "isNew": true,
         "dateAdded": "2026-04-11"
+      },
+      {
+        "title": "Azure MCP tools ship built-in to Visual Studio 2022",
+        "description": "Native Azure MCP integration without separate extensions",
+        "url": "https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/",
+        "isNew": true,
+        "dateAdded": "2026-04-18"
+      },
+      {
+        "title": "Agentic Refactoring with GitHub Copilot + Docker Sandbox",
+        "description": "Secure isolated runtimes for legacy modernization",
+        "url": "https://devblogs.microsoft.com/all-things-azure/best-of-both-worlds-for-agentic-refactoring-github-copilot-microvms-via-docker-sandbox/",
+        "isNew": true,
+        "dateAdded": "2026-04-18"
       }
     ]
   },
@@ -271,78 +285,92 @@
         "title": "Delegate tasks to Copilot coding agent from Visual Studio",
         "description": "Offload complex tasks to autonomous agent mode",
         "url": "https://github.blog/changelog/2026-02-17-delegate-tasks-to-copilot-coding-agent-from-visual-studio",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-14"
       },
       {
         "title": "Secret scanning in AI coding agents via GitHub MCP Server",
         "description": "Detect exposed secrets before committing",
         "url": "https://github.blog/changelog/2026-03-17-secret-scanning-in-ai-coding-agents-via-the-github-mcp-server/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "GitHub Copilot in Visual Studio — February update",
         "description": "Expanded agent capabilities and smarter completions",
         "url": "https://github.blog/changelog/2026-03-04-github-copilot-in-visual-studio-february-update",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "Copilot coding agent works faster with semantic code search",
         "description": "Find code based on meaning, not exact text matches",
         "url": "https://github.blog/changelog/2026-03-17-copilot-coding-agent-works-faster-with-semantic-code-search/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "Copilot code review now runs on agentic architecture",
         "description": "AI-powered code review with tool-calling agents",
         "url": "https://github.blog/changelog/2026-03-05-copilot-code-review-now-runs-on-an-agentic-architecture",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "More visibility into Copilot coding agent sessions",
         "description": "View agent session logs and understand Copilot's work",
         "url": "https://github.blog/changelog/2026-03-19-more-visibility-into-copilot-coding-agent-sessions",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "Manage Copilot coding agent repository access via API",
         "description": "Programmatic control over agent access at scale",
         "url": "https://github.blog/changelog/2026-03-24-manage-copilot-coding-agent-repository-access-via-the-api",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "Research, plan, and code with Copilot cloud agent",
         "description": "Expanded agent capabilities beyond pull request workflows",
         "url": "https://github.blog/changelog/2026-03-31-research-plan-and-code-with-copilot-cloud-agent",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
       },
       {
         "title": "Run multiple agents at once with /fleet in Copilot CLI",
         "description": "Parallel agent execution for multi-file tasks",
         "url": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
       },
       {
         "title": "Agent-driven development in Copilot Applied Science",
         "description": "How GitHub's AI team uses agents internally",
         "url": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
       },
       {
         "title": "Under the hood: Security architecture of GitHub Agentic Workflows",
         "description": "Deep dive into agent security and sandboxing",
         "url": "https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-04"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio — March update",
+        "description": "Custom agents, find_symbol tool, and enterprise MCP governance",
+        "url": "https://github.blog/changelog/2026-04-02-github-copilot-in-visual-studio-march-update/",
+        "isNew": true,
+        "dateAdded": "2026-04-18"
+      },
+      {
+        "title": "GitHub Copilot CLI auto model selection",
+        "description": "Copilot chooses optimal models with 10% discount on premium requests",
+        "url": "https://github.blog/changelog/2026-04-17-github-copilot-cli-now-supports-copilot-auto-model-selection/",
+        "isNew": true,
+        "dateAdded": "2026-04-18"
       }
     ]
   },
@@ -424,42 +452,42 @@
         "title": "Accelerate app development with GitHub Copilot",
         "description": "5-module learning path for intermediate developers",
         "url": "https://learn.microsoft.com/training/paths/accelerate-app-development-using-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "GitHub Copilot Fundamentals Part 1",
         "description": "Foundational learning path for Copilot",
         "url": "https://learn.microsoft.com/training/paths/copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "GitHub Copilot Fundamentals Part 2",
         "description": "Advanced fundamentals learning path",
         "url": "https://learn.microsoft.com/training/paths/gh-copilot-2/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "Using GitHub Copilot with Python",
         "description": "Python-specific Copilot training module",
         "url": "https://learn.microsoft.com/training/modules/introduction-copilot-python/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "Using GitHub Copilot with JavaScript",
         "description": "JavaScript-specific Copilot training module",
         "url": "https://learn.microsoft.com/training/modules/introduction-copilot-javascript/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       },
       {
         "title": "Introduction to GitHub Copilot Enterprise",
         "description": "Enterprise features and administration",
         "url": "https://learn.microsoft.com/training/modules/introduction-to-github-copilot-enterprise/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-03-28"
       }
     ]
