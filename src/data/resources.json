@@ -225,6 +225,55 @@
         "url": "https://devblogs.microsoft.com/all-things-azure/best-of-both-worlds-for-agentic-refactoring-github-copilot-microvms-via-docker-sandbox/",
         "isNew": true,
         "dateAdded": "2026-04-18"
+      },
+      {
+        "title": "Copilot Memories",
+        "description": "Capture and share coding preferences automatically",
+        "url": "https://devblogs.microsoft.com/visualstudio/copilot-memories/",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "Unlock language-specific rich symbol context",
+        "description": "New find_symbol tool for agent mode",
+        "url": "https://devblogs.microsoft.com/visualstudio/unlock-language-specific-rich-symbol-context-using-new-find_symbol-tool/",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "GPT-4o code completion model (public preview)",
+        "description": "New code completion model based on GPT-4o mini",
+        "url": "https://devblogs.microsoft.com/visualstudio/gpt-4o-copilot-code-completion-model-available-now-in-visual-studio-public-preview/",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "Faster .NET Upgrades with GitHub Copilot",
+        "description": "AI-powered .NET app modernization experience",
+        "url": "https://devblogs.microsoft.com/visualstudio/faster-net-upgrades-powered-by-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "C++ refactoring and build performance with Copilot",
+        "description": "MSVC upgrades, build optimization, and C++ refactoring",
+        "url": "https://devblogs.microsoft.com/visualstudio/upgrade-msvc-improve-c-build-performance-and-refactor-c-code-with-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "Claude 3.7 Sonnet in Visual Studio",
+        "description": "Anthropic's Claude 3.7 model now available in Copilot",
+        "url": "https://devblogs.microsoft.com/visualstudio/claude-3-7-now-available-in-github-copilot-for-visual-studio/",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "Visual Studio 2026 is here",
+        "description": "Major release with enhanced AI-driven development",
+        "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
       }
     ]
   },
@@ -371,6 +420,20 @@
         "url": "https://github.blog/changelog/2026-04-17-github-copilot-cli-now-supports-copilot-auto-model-selection/",
         "isNew": true,
         "dateAdded": "2026-04-18"
+      },
+      {
+        "title": "Enable cloud agent via custom properties",
+        "description": "Granular control over cloud agent access per organization",
+        "url": "https://github.blog/changelog/2026-04-15-enable-copilot-cloud-agent-via-custom-properties/",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "Copilot coding agent now starts work 50% faster",
+        "description": "Optimized startup times for cloud-based agent sessions",
+        "url": "https://github.blog/changelog/2026-03-19-copilot-coding-agent-now-starts-work-50-faster",
+        "isNew": true,
+        "dateAdded": "2026-04-25"
       }
     ]
   },
