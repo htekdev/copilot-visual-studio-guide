@@ -202,14 +202,14 @@
         "title": "Announcing Azure MCP Server 2.0 Stable Release",
         "description": "Self-hosted remote MCP server for Azure resource management",
         "url": "https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-2-0-stable-release",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-11"
       },
       {
         "title": "Agentic development with .NET Aspire",
         "description": "Build, run, and observe agentic workflows with .NET Aspire",
         "url": "https://devblogs.microsoft.com/aspire/agentic-dev-aspirations/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-04-11"
       },
       {
@@ -274,6 +274,20 @@
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/",
         "isNew": true,
         "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "C++ Code Intelligence for GitHub Copilot CLI",
+        "description": "Enhanced C++ support in Copilot CLI (Preview)",
+        "url": "https://devblogs.microsoft.com/cppblog/c-code-intelligence-for-github-copilot-cli-preview/",
+        "isNew": true,
+        "dateAdded": "2026-05-02"
+      },
+      {
+        "title": "GitHub Copilot meets Azure Developer CLI",
+        "description": "AI-assisted Azure project generation with azd",
+        "url": "https://devblogs.microsoft.com/azure-sdk/azd-copilot-integration/",
+        "isNew": true,
+        "dateAdded": "2026-05-02"
       }
     ]
   },
@@ -434,6 +448,27 @@
         "url": "https://github.blog/changelog/2026-03-19-copilot-coding-agent-now-starts-work-50-faster",
         "isNew": true,
         "dateAdded": "2026-04-25"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio — April update",
+        "description": "Latest enhancements including inline agent mode features",
+        "url": "https://github.blog/changelog/2026-04-30-github-copilot-in-visual-studio-april-update/",
+        "isNew": true,
+        "dateAdded": "2026-05-02"
+      },
+      {
+        "title": "Fix merge conflicts with Copilot cloud agent",
+        "description": "Resolve conflicts in three clicks using AI agent",
+        "url": "https://github.blog/changelog/2026-04-13-fix-merge-conflicts-in-three-clicks-with-copilot-cloud-agent/",
+        "isNew": true,
+        "dateAdded": "2026-05-02"
+      },
+      {
+        "title": "Copilot SDK in public preview",
+        "description": "Build custom Copilot integrations with SDK",
+        "url": "https://github.blog/changelog/2026-04-07-copilot-sdk-in-public-preview/",
+        "isNew": true,
+        "dateAdded": "2026-05-02"
       }
     ]
   },
