@@ -52,6 +52,20 @@
     "icon": "\ud83d\udcdd",
     "resources": [
       {
+        "title": "Visual Studio April Update \u2013 Cloud Agent Integration",
+        "description": "New cloud-based agent features and April release highlights",
+        "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/",
+        "isNew": true,
+        "dateAdded": "2026-05-16"
+      },
+      {
+        "title": "Agent Skills in Visual Studio: Teach Copilot How Your Team Works",
+        "description": "Customize Copilot agent with team-specific skills and workflows",
+        "url": "https://devblogs.microsoft.com/visualstudio/agent-skills-in-visual-studio/",
+        "isNew": true,
+        "dateAdded": "2026-05-16"
+      },
+      {
         "title": "Announcing a free GitHub Copilot for Visual Studio",
         "description": "Introduction to the free tier for Visual Studio users",
         "url": "https://devblogs.microsoft.com/visualstudio/announcing-a-free-github-copilot-for-visual-studio/",
@@ -309,6 +323,20 @@
     "title": "GitHub Blog",
     "icon": "\ud83d\udc19",
     "resources": [
+      {
+        "title": "GPT-5.5 is generally available for GitHub Copilot",
+        "description": "New GPT-5.5 model now available for all Copilot users",
+        "url": "https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-05-16"
+      },
+      {
+        "title": "Copilot code review: Comment experience improvements",
+        "description": "Enhanced commenting and review workflow in code review agent",
+        "url": "https://github.blog/changelog/2026-05-12-copilot-code-review-comment-experience-improvements/",
+        "isNew": true,
+        "dateAdded": "2026-05-16"
+      },
       {
         "title": "Agent mode 101: All about GitHub Copilot's powerful mode",
         "description": "Deep dive into agent mode capabilities",
