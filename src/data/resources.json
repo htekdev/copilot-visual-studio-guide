@@ -49,21 +49,21 @@
         "title": "Visual Studio 2026 Release Notes",
         "description": "Latest features and updates for Visual Studio 2026",
         "url": "https://learn.microsoft.com/visualstudio/releases/2026/release-notes",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-05-23"
       },
       {
         "title": "Get started with Azure MCP Server",
         "description": "Connect Visual Studio to Azure resources via MCP",
         "url": "https://learn.microsoft.com/azure/developer/azure-mcp-server/get-started/tools/visual-studio",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-05-23"
       },
       {
         "title": "Set up GitHub Copilot for Windows development",
         "description": "WinUI agent plugin and MCP setup guide for Windows apps",
         "url": "https://learn.microsoft.com/windows/apps/how-tos/ai-setup",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-05-23"
       },
       {
@@ -414,6 +414,20 @@
         "url": "https://devblogs.microsoft.com/foundry/agent-service-build2026/",
         "isNew": true,
         "dateAdded": "2026-06-06"
+      },
+      {
+        "title": "Review pull requests without leaving Visual Studio",
+        "description": "Native PR review experience with Copilot-powered insights",
+        "url": "https://devblogs.microsoft.com/visualstudio/review-pull-requests-without-leaving-visual-studio/",
+        "isNew": true,
+        "dateAdded": "2026-06-13"
+      },
+      {
+        "title": "GitHub Copilot modernization for C++ is out of preview",
+        "description": "Automated C++ modernization with Copilot now GA",
+        "url": "https://devblogs.microsoft.com/cppblog/ghcp-modernization-available/",
+        "isNew": true,
+        "dateAdded": "2026-06-13"
       }
     ]
   },
@@ -672,6 +686,27 @@
         "url": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
         "isNew": true,
         "dateAdded": "2026-06-06"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio — May update",
+        "description": "Latest Visual Studio Copilot features and improvements",
+        "url": "https://github.blog/changelog/2026-06-04-github-copilot-in-visual-studio-may-update/",
+        "isNew": true,
+        "dateAdded": "2026-06-13"
+      },
+      {
+        "title": "Custom agents in GitHub Copilot CLI",
+        "description": "Build workflow-based agents for CLI automation",
+        "url": "https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli/",
+        "isNew": true,
+        "dateAdded": "2026-06-13"
+      },
+      {
+        "title": "Larger context windows and configurable reasoning levels",
+        "description": "Enhanced Copilot capabilities with extended context",
+        "url": "https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-06-13"
       }
     ]
   },
