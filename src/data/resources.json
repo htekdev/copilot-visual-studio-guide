@@ -70,28 +70,28 @@
         "title": "What is GitHub Copilot Edits?",
         "description": "Learn about iterative, multi-file editing with Copilot Edits",
         "url": "https://learn.microsoft.com/visualstudio/ide/copilot-edits",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Use built-in and custom agents",
         "description": "Work with specialized and custom Copilot agents",
         "url": "https://learn.microsoft.com/visualstudio/ide/copilot-specialized-agents",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Using the NuGet MCP Server",
         "description": "Connect Copilot to NuGet packages via MCP",
         "url": "https://learn.microsoft.com/nuget/concepts/nuget-mcp-server",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Create a minimal MCP server in C#",
         "description": "Build and publish custom MCP servers with .NET",
         "url": "https://learn.microsoft.com/dotnet/ai/quickstarts/build-mcp-server",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       }
     ]
@@ -104,7 +104,7 @@
         "title": "Visual Studio May Update – Plan, Review, Refine",
         "description": "Plan agent, multi-file diff, and context management",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-may-update-plan-review-refine/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-05-30"
       },
       {
@@ -377,42 +377,42 @@
         "title": "What's Coming Next: Build 2026 Announcements",
         "description": "Microsoft Build 2026 Visual Studio and Copilot updates",
         "url": "https://devblogs.microsoft.com/visualstudio/whats-coming-next-in-visual-studio-our-microsoft-build-2026-announcements/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Introducing the Plan agent in Visual Studio",
         "description": "Plan before you build with the new Plan agent",
         "url": "https://devblogs.microsoft.com/visualstudio/plan-before-you-build-introducing-the-plan-agent-in-visual-studio/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Doing More with GitHub Copilot as a .NET Developer",
         "description": "Advanced Copilot techniques for .NET development",
         "url": "https://devblogs.microsoft.com/dotnet/doing-more-with-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "WinUI agent plugin for GitHub Copilot",
         "description": "Build native Windows apps with AI agents",
         "url": "https://devblogs.microsoft.com/ifdef-windows/build-native-windows-apps-with-ai-agents-for-winui-and-windows-app-sdk/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Announcing Intelligent Terminal 0.1",
         "description": "AI-powered terminal experience for Windows",
         "url": "https://devblogs.microsoft.com/commandline/announcing-intelligent-terminal-version-0-1/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Build and run agents at scale with Microsoft Foundry",
         "description": "Enterprise agent service announced at Build 2026",
         "url": "https://devblogs.microsoft.com/foundry/agent-service-build2026/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
@@ -435,6 +435,13 @@
     "title": "GitHub Blog",
     "icon": "🐙",
     "resources": [
+      {
+        "title": "Getting more from each token: context & model routing",
+        "description": "How Copilot improves efficiency with caching and Auto routing",
+        "url": "https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/",
+        "isNew": true,
+        "dateAdded": "2026-06-20"
+      },
       {
         "title": "GPT-5.5 is generally available for GitHub Copilot",
         "description": "New GPT-5.5 model now available for all Copilot users",
@@ -649,42 +656,42 @@
         "title": "GitHub Copilot app: agent-native desktop experience",
         "description": "New standalone Copilot app for developers",
         "url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Shape Copilot code review around your team",
         "description": "Customize code review to match your team's standards",
         "url": "https://github.blog/changelog/2026-06-02-shape-copilot-code-review-around-your-team/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Copilot SDK is now generally available",
         "description": "Build custom Copilot integrations with official SDK",
         "url": "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Schedule and automate tasks with Copilot cloud agent",
         "description": "Automated agent execution in the cloud",
         "url": "https://github.blog/changelog/2026-06-02-schedule-and-automate-tasks-with-copilot-cloud-agent/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Copilot CLI: UI, rubber duck, scheduling, voice input",
         "description": "Major enhancements to Copilot CLI experience",
         "url": "https://github.blog/changelog/2026-06-02-copilot-cli-improved-ui-rubber-duck-prompt-scheduling-and-voice-input/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Improving token efficiency in GitHub Agentic Workflows",
         "description": "Optimize agent performance and reduce costs",
         "url": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
@@ -830,14 +837,14 @@
         "title": "Building Applications with GitHub Copilot Agent Mode",
         "description": "Learn to build apps using autonomous agent capabilities",
         "url": "https://learn.microsoft.com/training/modules/github-copilot-agent-mode/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       },
       {
         "title": "Responsible AI with GitHub Copilot",
         "description": "Best practices for ethical AI-assisted development",
         "url": "https://learn.microsoft.com/training/modules/responsible-ai-with-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-06"
       }
     ]
