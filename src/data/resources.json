@@ -714,6 +714,13 @@
         "url": "https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/",
         "isNew": true,
         "dateAdded": "2026-06-13"
+      },
+      {
+        "title": "Delegate tasks to Copilot coding agent from Visual Studio",
+        "description": "Send tasks to background cloud agent from VS",
+        "url": "https://github.blog/changelog/2026-02-17-delegate-tasks-to-copilot-coding-agent-from-visual-studio/",
+        "isNew": true,
+        "dateAdded": "2026-06-27"
       }
     ]
   },
