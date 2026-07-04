@@ -93,6 +93,13 @@
         "url": "https://learn.microsoft.com/dotnet/ai/quickstarts/build-mcp-server",
         "isNew": false,
         "dateAdded": "2026-06-06"
+      },
+      {
+        "title": "Get started with .NET AI and the Model Context Protocol",
+        "description": "Build MCP clients and servers using the C# SDK",
+        "url": "https://learn.microsoft.com/dotnet/ai/get-started-mcp",
+        "isNew": true,
+        "dateAdded": "2026-07-04"
       }
     ]
   },
@@ -419,15 +426,22 @@
         "title": "Review pull requests without leaving Visual Studio",
         "description": "Native PR review experience with Copilot-powered insights",
         "url": "https://devblogs.microsoft.com/visualstudio/review-pull-requests-without-leaving-visual-studio/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-13"
       },
       {
         "title": "GitHub Copilot modernization for C++ is out of preview",
         "description": "Automated C++ modernization with Copilot now GA",
         "url": "https://devblogs.microsoft.com/cppblog/ghcp-modernization-available/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-13"
+      },
+      {
+        "title": "Visual Studio June Update - Track Your Usage, Trust Your Tools",
+        "description": "Copilot usage tracking, MCP trust checks, and more",
+        "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-june-update-track-your-usage-trust-your-tools/",
+        "isNew": true,
+        "dateAdded": "2026-07-04"
       }
     ]
   },
@@ -698,21 +712,21 @@
         "title": "GitHub Copilot in Visual Studio — May update",
         "description": "Latest Visual Studio Copilot features and improvements",
         "url": "https://github.blog/changelog/2026-06-04-github-copilot-in-visual-studio-may-update/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-13"
       },
       {
         "title": "Custom agents in GitHub Copilot CLI",
         "description": "Build workflow-based agents for CLI automation",
         "url": "https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-13"
       },
       {
         "title": "Larger context windows and configurable reasoning levels",
         "description": "Enhanced Copilot capabilities with extended context",
         "url": "https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-13"
       },
       {
@@ -853,6 +867,13 @@
         "url": "https://learn.microsoft.com/training/modules/responsible-ai-with-github-copilot/",
         "isNew": false,
         "dateAdded": "2026-06-06"
+      },
+      {
+        "title": "Challenge GitHub Copilot with SQL",
+        "description": "Advanced Copilot techniques for complex SQL queries",
+        "url": "https://learn.microsoft.com/training/modules/challenge-github-copilot-sql/",
+        "isNew": true,
+        "dateAdded": "2026-07-04"
       }
     ]
   },
