@@ -1,7 +1,7 @@
 [
   {
     "title": "Official Documentation",
-    "icon": "📚",
+    "icon": "\ud83d\udcda",
     "resources": [
       {
         "title": "Get started with GitHub Copilot",
@@ -105,17 +105,17 @@
   },
   {
     "title": "Visual Studio Blog",
-    "icon": "📝",
+    "icon": "\ud83d\udcdd",
     "resources": [
       {
-        "title": "Visual Studio May Update – Plan, Review, Refine",
+        "title": "Visual Studio May Update \u2013 Plan, Review, Refine",
         "description": "Plan agent, multi-file diff, and context management",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-may-update-plan-review-refine/",
         "isNew": false,
         "dateAdded": "2026-05-30"
       },
       {
-        "title": "Visual Studio April Update – Cloud Agent Integration",
+        "title": "Visual Studio April Update \u2013 Cloud Agent Integration",
         "description": "New cloud-based agent features and April release highlights",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/",
         "isNew": false,
@@ -442,18 +442,32 @@
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-june-update-track-your-usage-trust-your-tools/",
         "isNew": true,
         "dateAdded": "2026-07-04"
+      },
+      {
+        "title": "GitHub Copilot Free is here in Visual Studio",
+        "description": "Announcing free tier availability with completions, chat, and AI tools",
+        "url": "https://devblogs.microsoft.com/visualstudio/github-copilot-free-is-here-in-visual-studio",
+        "isNew": true,
+        "dateAdded": "2026-07-11"
+      },
+      {
+        "title": "Unlocking More Power: Tool Calling in GitHub Copilot",
+        "description": "Copilot can now automatically search codebase and call tools",
+        "url": "https://devblogs.microsoft.com/visualstudio/function-calling-is-now-enabled-in-github-copilot",
+        "isNew": true,
+        "dateAdded": "2026-07-11"
       }
     ]
   },
   {
     "title": "GitHub Blog",
-    "icon": "🐙",
+    "icon": "\ud83d\udc19",
     "resources": [
       {
         "title": "Getting more from each token: context & model routing",
         "description": "How Copilot improves efficiency with caching and Auto routing",
         "url": "https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-06-20"
       },
       {
@@ -534,7 +548,7 @@
         "dateAdded": "2026-03-28"
       },
       {
-        "title": "GitHub Copilot in Visual Studio — February update",
+        "title": "GitHub Copilot in Visual Studio \u2014 February update",
         "description": "Expanded agent capabilities and smarter completions",
         "url": "https://github.blog/changelog/2026-03-04-github-copilot-in-visual-studio-february-update",
         "isNew": false,
@@ -597,7 +611,7 @@
         "dateAdded": "2026-04-04"
       },
       {
-        "title": "GitHub Copilot in Visual Studio — March update",
+        "title": "GitHub Copilot in Visual Studio \u2014 March update",
         "description": "Custom agents, find_symbol tool, and enterprise MCP governance",
         "url": "https://github.blog/changelog/2026-04-02-github-copilot-in-visual-studio-march-update/",
         "isNew": false,
@@ -625,7 +639,7 @@
         "dateAdded": "2026-04-25"
       },
       {
-        "title": "GitHub Copilot in Visual Studio — April update",
+        "title": "GitHub Copilot in Visual Studio \u2014 April update",
         "description": "Latest enhancements including inline agent mode features",
         "url": "https://github.blog/changelog/2026-04-30-github-copilot-in-visual-studio-april-update/",
         "isNew": false,
@@ -646,21 +660,21 @@
         "dateAdded": "2026-05-02"
       },
       {
-        "title": "GitHub Copilot in Visual Studio — November update",
+        "title": "GitHub Copilot in Visual Studio \u2014 November update",
         "description": "Visual Studio 2026 GA with cloud agent and Copilot actions",
         "url": "https://github.blog/changelog/2025-12-03-github-copilot-in-visual-studio-november-update/",
         "isNew": false,
         "dateAdded": "2026-05-09"
       },
       {
-        "title": "GitHub Copilot in Visual Studio — January update",
+        "title": "GitHub Copilot in Visual Studio \u2014 January update",
         "description": "Colorized completions and partial acceptance",
         "url": "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update/",
         "isNew": false,
         "dateAdded": "2026-05-09"
       },
       {
-        "title": "GitHub Copilot in Visual Studio — February update",
+        "title": "GitHub Copilot in Visual Studio \u2014 February update",
         "description": "Copilot memories, custom prompts, and NuGet MCP server",
         "url": "https://github.blog/changelog/2026-03-04-github-copilot-in-visual-studio-february-update/",
         "isNew": false,
@@ -709,7 +723,7 @@
         "dateAdded": "2026-06-06"
       },
       {
-        "title": "GitHub Copilot in Visual Studio — May update",
+        "title": "GitHub Copilot in Visual Studio \u2014 May update",
         "description": "Latest Visual Studio Copilot features and improvements",
         "url": "https://github.blog/changelog/2026-06-04-github-copilot-in-visual-studio-may-update/",
         "isNew": false,
@@ -735,12 +749,26 @@
         "url": "https://github.blog/changelog/2026-02-17-delegate-tasks-to-copilot-coding-agent-from-visual-studio/",
         "isNew": true,
         "dateAdded": "2026-06-27"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio \u2014 April 2026 update",
+        "description": "Cloud agent integration, custom agents, and debugger agent",
+        "url": "https://github.blog/changelog/2026-04-30-github-copilot-in-visual-studio-april-update",
+        "isNew": true,
+        "dateAdded": "2026-07-11"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio \u2014 January 2026 update",
+        "description": "Colorized completions and partial acceptance support",
+        "url": "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update",
+        "isNew": true,
+        "dateAdded": "2026-07-11"
       }
     ]
   },
   {
     "title": "Microsoft Learn Training",
-    "icon": "🎓",
+    "icon": "\ud83c\udf93",
     "resources": [
       {
         "title": "Develop code features using GitHub Copilot tools",
@@ -879,7 +907,7 @@
   },
   {
     "title": "Community & Support",
-    "icon": "💬",
+    "icon": "\ud83d\udcac",
     "resources": [
       {
         "title": "GitHub Community - Copilot Discussions",
@@ -927,7 +955,7 @@
   },
   {
     "title": "Official YouTube Playlists",
-    "icon": "🎬",
+    "icon": "\ud83c\udfac",
     "resources": [
       {
         "title": "GitHub Copilot Series",
