@@ -461,15 +461,29 @@
         "title": "GitHub Copilot Free is here in Visual Studio",
         "description": "Announcing free tier availability with completions, chat, and AI tools",
         "url": "https://devblogs.microsoft.com/visualstudio/github-copilot-free-is-here-in-visual-studio",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-11"
       },
       {
         "title": "Unlocking More Power: Tool Calling in GitHub Copilot",
         "description": "Copilot can now automatically search codebase and call tools",
         "url": "https://devblogs.microsoft.com/visualstudio/function-calling-is-now-enabled-in-github-copilot",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-11"
+      },
+      {
+        "title": "Visual Studio July Update \u2014 Agent Powered by Copilot SDK",
+        "description": "Meet the new Agent in Copilot Chat, built on GitHub Copilot SDK",
+        "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-july-update-meet-the-new-agent-powered-by-copilot-sdk/",
+        "isNew": true,
+        "dateAdded": "2026-08-01"
+      },
+      {
+        "title": "Tell your model when to think harder",
+        "description": "Control reasoning effort for different coding tasks in Copilot",
+        "url": "https://devblogs.microsoft.com/visualstudio/tell-your-model-when-to-think-harder/",
+        "isNew": true,
+        "dateAdded": "2026-08-01"
       }
     ]
   },
@@ -775,14 +789,14 @@
         "title": "GitHub Copilot in Visual Studio \u2014 April 2026 update",
         "description": "Cloud agent integration, custom agents, and debugger agent",
         "url": "https://github.blog/changelog/2026-04-30-github-copilot-in-visual-studio-april-update",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-11"
       },
       {
         "title": "GitHub Copilot in Visual Studio \u2014 January 2026 update",
         "description": "Colorized completions and partial acceptance support",
         "url": "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-11"
       },
       {
@@ -819,6 +833,41 @@
         "url": "https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard/",
         "isNew": true,
         "dateAdded": "2026-07-25"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio \u2014 July update",
+        "description": "July 2026 updates: new agent, .NET/Azure skills, and more",
+        "url": "https://github.blog/changelog/2026-07-30-github-copilot-in-visual-studio-july-update/",
+        "isNew": true,
+        "dateAdded": "2026-08-01"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio Code \u2014 July 2026",
+        "description": "VS Code July updates: agents window, chat, and navigation",
+        "url": "https://github.blog/changelog/2026-07-30-github-copilot-in-visual-studio-code-july-2026-releases/",
+        "isNew": true,
+        "dateAdded": "2026-08-01"
+      },
+      {
+        "title": "The harness is all you need (mostly)",
+        "description": "Understanding AI tools, models, MCPs, and skills complexity",
+        "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/",
+        "isNew": true,
+        "dateAdded": "2026-08-01"
+      },
+      {
+        "title": "Copilot code review: Agent skills and MCP GA",
+        "description": "Agent skills and MCP servers now generally available for code review",
+        "url": "https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/",
+        "isNew": true,
+        "dateAdded": "2026-08-01"
+      },
+      {
+        "title": "Grok 4.5 is now available in GitHub Copilot",
+        "description": "xAI's reasoning model with 500k token context for complex workflows",
+        "url": "https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-08-01"
       }
     ]
   },
