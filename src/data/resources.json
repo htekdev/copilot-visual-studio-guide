@@ -100,6 +100,27 @@
         "url": "https://learn.microsoft.com/dotnet/ai/get-started-mcp",
         "isNew": false,
         "dateAdded": "2026-07-04"
+      },
+      {
+        "title": "Debug your app with GitHub Copilot",
+        "description": "Use AI to understand exceptions, call stacks, and debug issues",
+        "url": "https://learn.microsoft.com/visualstudio/debugger/debug-with-copilot",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
+      },
+      {
+        "title": "AI-assisted development in Visual Studio",
+        "description": "Overview of AI capabilities in Visual Studio like Copilot",
+        "url": "https://learn.microsoft.com/visualstudio/ide/ai-assisted-development-visual-studio",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
+      },
+      {
+        "title": "Get started with Copilot code review for pull requests",
+        "description": "Guide to using Copilot for reviewing PRs in Azure DevOps",
+        "url": "https://learn.microsoft.com/azure/devops/repos/git/copilot-code-reviews",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
       }
     ]
   },
@@ -824,35 +845,35 @@
         "title": "Claude Opus 5 in GitHub Copilot",
         "description": "Complex reasoning model now available in Visual Studio",
         "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-25"
       },
       {
         "title": "Gemini 3.6 Flash in GitHub Copilot",
         "description": "Google's latest Flash model with parallel tool use support",
         "url": "https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-25"
       },
       {
         "title": "GPT-5.6 Sol, Terra, and Luna in Copilot",
         "description": "Three new variants for different coding task needs",
         "url": "https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-25"
       },
       {
         "title": "View AI credits per billing cycle",
         "description": "Copilot users can now track AI credit usage",
         "url": "https://github.blog/changelog/2026-07-20-copilot-users-can-now-see-ai-credits-used-per-billing-cycle/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-25"
       },
       {
         "title": "Copilot usage metrics impact dashboard",
         "description": "New dashboard for monitoring Copilot usage and impact",
         "url": "https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-07-25"
       },
       {
@@ -931,6 +952,61 @@
         "url": "https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3/",
         "isNew": true,
         "dateAdded": "2026-08-08"
+      },
+      {
+        "title": "Write your first prompt with the GitHub Copilot app",
+        "description": "Guide to getting started with Copilot App prompting",
+        "url": "https://github.blog/ai-and-ml/github-copilot/write-your-first-prompt-with-the-github-copilot-app/",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
+      },
+      {
+        "title": "How to bring your software delivery workflow into GitHub with agent apps",
+        "description": "Integrate your development workflow with Copilot agents",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
+      },
+      {
+        "title": "Using the GitHub Copilot SDK for Java",
+        "description": "Learn how to use the Copilot SDK in Java applications",
+        "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
+      }
+    ]
+  },
+  {
+    "title": "GitHub Blog Changelog",
+    "icon": "📝",
+    "resources": [
+      {
+        "title": "Agent Plugins 1.0 in VS Code, Copilot CLI, and the Copilot app",
+        "description": "Release of Agent Plugins 1.0 across multiple tools",
+        "url": "https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
+      },
+      {
+        "title": "Grok 4.6 is now available in GitHub Copilot",
+        "description": "xAI's Grok 4.6 model now available as a Copilot option",
+        "url": "https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
+      },
+      {
+        "title": "Gemini 3.7 Flash is now available in GitHub Copilot",
+        "description": "Google's latest Gemini model available in Copilot",
+        "url": "https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
+      },
+      {
+        "title": "GitHub Copilot weekly releases — August 10",
+        "description": "Weekly update on new Copilot features and improvements",
+        "url": "https://github.blog/changelog/2026-08-13-github-copilot-weekly-releases-august-10/",
+        "isNew": true,
+        "dateAdded": "2026-08-15"
       }
     ]
   },
