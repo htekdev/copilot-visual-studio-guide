@@ -1,7 +1,7 @@
 [
   {
     "title": "Official Documentation",
-    "icon": "\ud83d\udcda",
+    "icon": "📚",
     "resources": [
       {
         "title": "Get started with GitHub Copilot",
@@ -126,14 +126,14 @@
         "title": "Get started with GitHub Copilot completions",
         "description": "Learn how to use Copilot inline code completions",
         "url": "https://learn.microsoft.com/visualstudio/ide/visual-studio-github-copilot-extension",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       }
     ]
   },
   {
     "title": "Visual Studio Blog",
-    "icon": "\ud83d\udcdd",
+    "icon": "📝",
     "resources": [
       {
         "title": "Today I will... review GitHub PRs",
@@ -157,14 +157,14 @@
         "dateAdded": "2026-07-18"
       },
       {
-        "title": "Visual Studio May Update \u2013 Plan, Review, Refine",
+        "title": "Visual Studio May Update – Plan, Review, Refine",
         "description": "Plan agent, multi-file diff, and context management",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-may-update-plan-review-refine/",
         "isNew": false,
         "dateAdded": "2026-05-30"
       },
       {
-        "title": "Visual Studio April Update \u2013 Cloud Agent Integration",
+        "title": "Visual Studio April Update – Cloud Agent Integration",
         "description": "New cloud-based agent features and April release highlights",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/",
         "isNew": false,
@@ -507,7 +507,7 @@
         "dateAdded": "2026-07-11"
       },
       {
-        "title": "Visual Studio July Update \u2014 Agent Powered by Copilot SDK",
+        "title": "Visual Studio July Update — Agent Powered by Copilot SDK",
         "description": "Meet the new Agent in Copilot Chat, built on GitHub Copilot SDK",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-july-update-meet-the-new-agent-powered-by-copilot-sdk/",
         "isNew": false,
@@ -545,7 +545,7 @@
         "title": "Today I will... Modernize a .NET application",
         "description": "Practical guide to modernizing .NET apps with Copilot",
         "url": "https://devblogs.microsoft.com/visualstudio/today-i-will-modernize-a-net-application/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       },
       {
@@ -568,12 +568,26 @@
         "url": "https://devblogs.microsoft.com/visualstudio/the-visual-studio-debugger-agentic-workflow-gets-a-test-driven-upgrade/",
         "isNew": true,
         "dateAdded": "2026-08-29"
+      },
+      {
+        "title": "Clearer Build Optimization Results with GitHub Copilot",
+        "description": "C++ build performance optimization with Copilot agents",
+        "url": "https://devblogs.microsoft.com/cppblog/clearer-build-optimization-results-with-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-09-12"
+      },
+      {
+        "title": "Copilot Code Reviews for Azure Repos (public preview)",
+        "description": "Copilot code review now available for Azure Repos",
+        "url": "https://devblogs.microsoft.com/devops/copilot-code-reviews-for-azure-repos-public-preview/",
+        "isNew": true,
+        "dateAdded": "2026-09-12"
       }
     ]
   },
   {
     "title": "GitHub Blog",
-    "icon": "\ud83d\udc19",
+    "icon": "🐙",
     "resources": [
       {
         "title": "GitHub Copilot app for Beginners: Run several agents at once",
@@ -583,7 +597,7 @@
         "dateAdded": "2026-09-05"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 June update",
+        "title": "GitHub Copilot in Visual Studio — June update",
         "description": "Usage tracking, MCP trust checks, and C++ modernization GA",
         "url": "https://github.blog/changelog/2026-07-14-github-copilot-in-visual-studio-june-update/",
         "isNew": false,
@@ -674,7 +688,7 @@
         "dateAdded": "2026-03-28"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 February update",
+        "title": "GitHub Copilot in Visual Studio — February update",
         "description": "Expanded agent capabilities and smarter completions",
         "url": "https://github.blog/changelog/2026-03-04-github-copilot-in-visual-studio-february-update",
         "isNew": false,
@@ -737,7 +751,7 @@
         "dateAdded": "2026-04-04"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 March update",
+        "title": "GitHub Copilot in Visual Studio — March update",
         "description": "Custom agents, find_symbol tool, and enterprise MCP governance",
         "url": "https://github.blog/changelog/2026-04-02-github-copilot-in-visual-studio-march-update/",
         "isNew": false,
@@ -765,7 +779,7 @@
         "dateAdded": "2026-04-25"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 April update",
+        "title": "GitHub Copilot in Visual Studio — April update",
         "description": "Latest enhancements including inline agent mode features",
         "url": "https://github.blog/changelog/2026-04-30-github-copilot-in-visual-studio-april-update/",
         "isNew": false,
@@ -786,21 +800,21 @@
         "dateAdded": "2026-05-02"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 November update",
+        "title": "GitHub Copilot in Visual Studio — November update",
         "description": "Visual Studio 2026 GA with cloud agent and Copilot actions",
         "url": "https://github.blog/changelog/2025-12-03-github-copilot-in-visual-studio-november-update/",
         "isNew": false,
         "dateAdded": "2026-05-09"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 January update",
+        "title": "GitHub Copilot in Visual Studio — January update",
         "description": "Colorized completions and partial acceptance",
         "url": "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update/",
         "isNew": false,
         "dateAdded": "2026-05-09"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 February update",
+        "title": "GitHub Copilot in Visual Studio — February update",
         "description": "Copilot memories, custom prompts, and NuGet MCP server",
         "url": "https://github.blog/changelog/2026-03-04-github-copilot-in-visual-studio-february-update/",
         "isNew": false,
@@ -849,7 +863,7 @@
         "dateAdded": "2026-06-06"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 May update",
+        "title": "GitHub Copilot in Visual Studio — May update",
         "description": "Latest Visual Studio Copilot features and improvements",
         "url": "https://github.blog/changelog/2026-06-04-github-copilot-in-visual-studio-may-update/",
         "isNew": false,
@@ -877,14 +891,14 @@
         "dateAdded": "2026-06-27"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 April 2026 update",
+        "title": "GitHub Copilot in Visual Studio — April 2026 update",
         "description": "Cloud agent integration, custom agents, and debugger agent",
         "url": "https://github.blog/changelog/2026-04-30-github-copilot-in-visual-studio-april-update",
         "isNew": false,
         "dateAdded": "2026-07-11"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 January 2026 update",
+        "title": "GitHub Copilot in Visual Studio — January 2026 update",
         "description": "Colorized completions and partial acceptance support",
         "url": "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update",
         "isNew": false,
@@ -926,14 +940,14 @@
         "dateAdded": "2026-07-25"
       },
       {
-        "title": "GitHub Copilot in Visual Studio \u2014 July update",
+        "title": "GitHub Copilot in Visual Studio — July update",
         "description": "July 2026 updates: new agent, .NET/Azure skills, and more",
         "url": "https://github.blog/changelog/2026-07-30-github-copilot-in-visual-studio-july-update/",
         "isNew": false,
         "dateAdded": "2026-08-01"
       },
       {
-        "title": "GitHub Copilot in Visual Studio Code \u2014 July 2026",
+        "title": "GitHub Copilot in Visual Studio Code — July 2026",
         "description": "VS Code July updates: agents window, chat, and navigation",
         "url": "https://github.blog/changelog/2026-07-30-github-copilot-in-visual-studio-code-july-2026-releases/",
         "isNew": false,
@@ -996,7 +1010,7 @@
         "dateAdded": "2026-08-08"
       },
       {
-        "title": "GitHub Copilot weekly releases \u2014 August 3",
+        "title": "GitHub Copilot weekly releases — August 3",
         "description": "Latest features and fixes in GitHub Copilot for August 2026",
         "url": "https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3/",
         "isNew": false,
@@ -1027,42 +1041,42 @@
         "title": "GitHub Copilot app for Beginners: Getting started",
         "description": "Introduction to GitHub Copilot app for new users",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       },
       {
         "title": "GitHub Copilot app for Beginners: Managing your work",
         "description": "Manage development workflow using Copilot app",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       },
       {
         "title": "Stacked sessions and pull requests in Copilot app",
         "description": "Work with stacked sessions and PRs in Copilot",
         "url": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       },
       {
         "title": "How the GitHub legal team used Copilot CLI",
         "description": "Real-world example of Copilot CLI for team automation",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       },
       {
         "title": "From coder to orchestrator: How agents shift developer roles",
         "description": "How AI agents are changing the developer landscape",
         "url": "https://github.blog/developer-skills/career-growth/from-coder-to-orchestrator-how-agents-shift-the-role-of-a-developer/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       }
     ]
   },
   {
     "title": "GitHub Blog Changelog",
-    "icon": "\ud83d\udcdd",
+    "icon": "📝",
     "resources": [
       {
         "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
@@ -1079,7 +1093,7 @@
         "dateAdded": "2026-09-05"
       },
       {
-        "title": "GitHub Copilot weekly releases \u2014 August 31",
+        "title": "GitHub Copilot weekly releases — August 31",
         "description": "Weekly model updates and VS Code agent session management features",
         "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31/",
         "isNew": true,
@@ -1107,7 +1121,7 @@
         "dateAdded": "2026-08-15"
       },
       {
-        "title": "GitHub Copilot weekly releases \u2014 August 10",
+        "title": "GitHub Copilot weekly releases — August 10",
         "description": "Weekly update on new Copilot features and improvements",
         "url": "https://github.blog/changelog/2026-08-13-github-copilot-weekly-releases-august-10/",
         "isNew": false,
@@ -1117,14 +1131,14 @@
         "title": "The new GitHub Copilot experience in Slack",
         "description": "Use GitHub Copilot in Slack for team collaboration",
         "url": "https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       },
       {
         "title": "Shared agentic work with GitHub Copilot in Teams",
         "description": "Collaborate with Copilot agents in Microsoft Teams",
         "url": "https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-08-22"
       },
       {
@@ -1133,12 +1147,40 @@
         "url": "https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2/",
         "isNew": true,
         "dateAdded": "2026-08-29"
+      },
+      {
+        "title": "GitHub Copilot weekly releases — August 24",
+        "description": "Weekly updates for team sessions in Slack/Teams and customization",
+        "url": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24/",
+        "isNew": true,
+        "dateAdded": "2026-09-12"
+      },
+      {
+        "title": "Claude Fable 5.1 is generally available in GitHub Copilot",
+        "description": "Anthropic's Claude Fable 5.1 now available for autonomous coding tasks",
+        "url": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-09-12"
+      },
+      {
+        "title": "Auto-resolution and analysis updates in Copilot code review",
+        "description": "Copilot now auto-resolves comments and writes commit messages",
+        "url": "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review/",
+        "isNew": true,
+        "dateAdded": "2026-09-12"
+      },
+      {
+        "title": "GitHub Copilot app Customize tab is generally available",
+        "description": "Customize MCP servers, plugins, and skills in Copilot app",
+        "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available/",
+        "isNew": true,
+        "dateAdded": "2026-09-12"
       }
     ]
   },
   {
     "title": "Microsoft Learn Training",
-    "icon": "\ud83c\udf93",
+    "icon": "🎓",
     "resources": [
       {
         "title": "Develop code features using GitHub Copilot tools",
@@ -1277,7 +1319,7 @@
   },
   {
     "title": "Community & Support",
-    "icon": "\ud83d\udcac",
+    "icon": "💬",
     "resources": [
       {
         "title": "GitHub Community - Copilot Discussions",
@@ -1325,7 +1367,7 @@
   },
   {
     "title": "Official YouTube Playlists",
-    "icon": "\ud83c\udfac",
+    "icon": "🎬",
     "resources": [
       {
         "title": "GitHub Copilot Series",
