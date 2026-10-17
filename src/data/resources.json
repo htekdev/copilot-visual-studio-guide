@@ -638,6 +638,13 @@
         "url": "https://devblogs.microsoft.com/visualstudio/today-i-will-find-hidden-latency-across-a-distributed-net-application/",
         "dateAdded": "2026-10-03",
         "isNew": true
+      },
+      {
+        "title": "GitHub Copilot Highlights in Visual Studio 17.14 Preview 3",
+        "description": "Latest Copilot features in Visual Studio 17.14 preview",
+        "url": "https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/",
+        "isNew": true,
+        "dateAdded": "2026-10-17"
       }
     ]
   },
@@ -1197,6 +1204,27 @@
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
         "isNew": true,
         "dateAdded": "2026-10-10"
+      },
+      {
+        "title": "GitHub for Beginners: How to get started with GitHub Copilot",
+        "description": "Beginner's guide to getting started with GitHub Copilot",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-for-beginners-how-to-get-started-with-github-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-10-17"
+      },
+      {
+        "title": "GitHub Copilot coding agent 101: Getting started with agentic workflows",
+        "description": "Getting started with agentic workflows on GitHub",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-coding-agent-101-getting-started-with-agentic-workflows-on-github/",
+        "isNew": true,
+        "dateAdded": "2026-10-17"
+      },
+      {
+        "title": "GitHub Copilot: The agent awakens",
+        "description": "Introduction to GitHub Copilot's agentic capabilities",
+        "url": "https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/",
+        "isNew": true,
+        "dateAdded": "2026-10-17"
       }
     ]
   },
