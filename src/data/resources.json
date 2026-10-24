@@ -623,21 +623,21 @@
         "description": "Latest Visual Studio update with Copilot customization",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-september-update-power-your-workflow-with-your-model/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "AI Is Changing How We Code. It's Also Changing How We Learn.",
         "description": "How AI and Copilot are transforming software development education",
         "url": "https://devblogs.microsoft.com/visualstudio/ai-is-changing-how-we-code-its-also-changing-how-we-learn/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "Today I will... find hidden latency across a distributed .NET application",
         "description": "Copilot-assisted debugging for distributed systems",
         "url": "https://devblogs.microsoft.com/visualstudio/today-i-will-find-hidden-latency-across-a-distributed-net-application/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "GitHub Copilot Highlights in Visual Studio 17.14 Preview 3",
@@ -1140,49 +1140,49 @@
         "description": "Copilot extends to desktop app interaction with computer use",
         "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "Selected models in GitHub Copilot deprecated",
         "description": "Model deprecation updates in GitHub Copilot",
         "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "GitHub Copilot in VS Code, September 2026 releases",
         "description": "Latest September 2026 releases for Copilot in VS Code",
         "url": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
         "description": "How GitHub migrated Copilot runtime to Rust with AI assistance",
         "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "HydraFusion in VS Code and the GitHub Copilot app",
         "description": "New HydraFusion model available in Copilot",
         "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "Claude Sonnet 5.5 in GitHub Copilot",
         "description": "Claude Sonnet 5.5 model now available in Copilot",
         "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "GPT-6.1 Sol in GitHub Copilot",
         "description": "GPT-6.1 Sol model released for GitHub Copilot",
         "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot/",
         "dateAdded": "2026-10-03",
-        "isNew": true
+        "isNew": false
       },
       {
         "title": "GitHub Copilot weekly releases \u2014 October 5",
@@ -1225,6 +1225,20 @@
         "url": "https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/",
         "isNew": true,
         "dateAdded": "2026-10-17"
+      },
+      {
+        "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+        "description": "Guide to teaching your Copilot app about your codebase",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+        "isNew": true,
+        "dateAdded": "2026-10-24"
+      },
+      {
+        "title": "The next developer interface is ambient intelligence",
+        "description": "Exploring ambient intelligence as the future developer interface",
+        "url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "isNew": true,
+        "dateAdded": "2026-10-24"
       }
     ]
   },
@@ -1348,14 +1362,14 @@
         "title": "Claude Opus 5.5 is now available in GitHub Copilot",
         "description": "Claude Opus 5.5 model released for GitHub Copilot",
         "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-03"
       },
       {
         "title": "Configure cost and quality in Copilot auto model selection",
         "description": "Fine-tune Copilot model selection for cost and quality",
         "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-03"
       }
     ]
