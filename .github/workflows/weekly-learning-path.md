@@ -4,10 +4,12 @@ description: Discovers new GitHub Copilot in Visual Studio tutorial videos from 
 strict: false
 
 on:
-  schedule: weekly
+  schedule:
+    - cron: "9 18 * * 0"
   workflow_dispatch:
 
 permissions:
+  copilot-requests: write
   contents: read
 
 tools:
