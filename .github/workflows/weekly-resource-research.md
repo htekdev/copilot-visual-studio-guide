@@ -4,10 +4,12 @@ description: Researches new GitHub Copilot in Visual Studio resources using Exa,
 strict: false
 
 on:
-  schedule: weekly
+  schedule:
+    - cron: "57 15 * * 6"
   workflow_dispatch:
 
 permissions:
+  copilot-requests: write
   contents: read
 
 tools:
