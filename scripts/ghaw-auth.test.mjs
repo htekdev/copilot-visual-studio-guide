@@ -41,6 +41,10 @@ for (const name of ['weekly-learning-path', 'weekly-resource-research']) {
   });
 }
 test('deployed schedules and tool-free smoke boundaries are preserved', () => {
+  const ci = readFileSync(new URL('../.github/workflows/ghaw-auth-tests.yml', import.meta.url), 'utf8');
+  assert.match(ci.split('  copilot-auth-smoke:')[0], /runs-on: ubuntu-24\.04/);
+  assert.match(ci, /npx playwright install --with-deps chromium/);
+  assert.match(ci, /run: npm test/);
   for (const [name, cron] of [['weekly-learning-path', '9 18 * * 0'], ['weekly-resource-research', '57 15 * * 6']]) {
     const compiled = readFileSync(new URL(`../.github/workflows/${name}.lock.yml`, import.meta.url), 'utf8');
     assert.ok(compiled.includes(`cron: "${cron}"`));
