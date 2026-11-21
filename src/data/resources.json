@@ -154,7 +154,7 @@
         "title": "Get started with GitHub Copilot for Azure",
         "description": "Streamline Azure development with Copilot in Visual Studio 2026",
         "url": "https://learn.microsoft.com/azure/developer/github-copilot-azure/get-started",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       }
     ]
@@ -650,43 +650,78 @@
         "title": "GitHub Copilot Highlights in Visual Studio 17.14 Preview 3",
         "description": "Latest Copilot features in Visual Studio 17.14 preview",
         "url": "https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-17"
       },
       {
         "title": "Visual Studio October Update – Compare Commits, Resolve Conflicts",
         "description": "Visual Studio 18.11 with improved git and Copilot integration",
         "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-october-update-compare-commits-to-your-code-resolve-conflicts-in-bulk-keep-coding/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Bring Your Own Model to the GitHub Copilot SDK with C#",
         "description": "Use your own models with Copilot SDK in Visual Studio",
         "url": "https://devblogs.microsoft.com/dotnet/bring-your-own-model-to-the-github-copilot-sdk-with-csharp/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Introducing Agentic Autofix for Code and Dependencies",
         "description": "AI-powered vulnerability fixing in Azure DevOps",
         "url": "https://devblogs.microsoft.com/devops/introducing-agentic-autofix-for-code-and-dependencies/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Introducing the Microsoft Copilot Harness in Foundry",
         "description": "Unified agent execution foundation across Microsoft products",
         "url": "https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Azure DevOps Available in Microsoft Copilot",
         "description": "Manage Azure DevOps work directly from Copilot",
         "url": "https://devblogs.microsoft.com/devops/azure-devops-available-in-microsoft-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
+      },
+      {
+        "title": "Copilot in Visual Studio Just Got a Major Upgrade",
+        "description": "Copilot Chat now runs on the Copilot SDK in VS 2026 18.12",
+        "url": "https://devblogs.microsoft.com/visualstudio/copilot-in-visual-studio-just-got-a-major-upgrade/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "Announcing Visual Studio 2026 LTSC 18.11",
+        "description": "Long-term servicing channel release for Visual Studio 2026",
+        "url": "https://devblogs.microsoft.com/visualstudio/announcing-visual-studio-2026-ltsc-1811/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "Modernize .NET apps for Windows Arm64 with Copilot",
+        "description": "Use the upgrade agent to migrate .NET apps to Arm64",
+        "url": "https://devblogs.microsoft.com/dotnet/modernize-dotnet-apps-for-windows-arm64/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "Azure DevOps integration with the GitHub Copilot app",
+        "description": "Public preview of agent sessions on Azure DevOps repos",
+        "url": "https://devblogs.microsoft.com/devops/azure-devops-integration-with-the-github-copilot-app-public-preview/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "Azure DevOps and GitHub: Start Your Agentic Journey",
+        "description": "Use Copilot agents with Azure DevOps work in VS and more",
+        "url": "https://devblogs.microsoft.com/devops/azure-devops-and-github-start-your-agentic-journey-where-you-are/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
       }
     ]
   },
@@ -1251,35 +1286,35 @@
         "title": "GitHub for Beginners: How to get started with GitHub Copilot",
         "description": "Beginner's guide to getting started with GitHub Copilot",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-for-beginners-how-to-get-started-with-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-17"
       },
       {
         "title": "GitHub Copilot coding agent 101: Getting started with agentic workflows",
         "description": "Getting started with agentic workflows on GitHub",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-coding-agent-101-getting-started-with-agentic-workflows-on-github/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-17"
       },
       {
         "title": "GitHub Copilot: The agent awakens",
         "description": "Introduction to GitHub Copilot's agentic capabilities",
         "url": "https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-17"
       },
       {
         "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
         "description": "Guide to teaching your Copilot app about your codebase",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-24"
       },
       {
         "title": "The next developer interface is ambient intelligence",
         "description": "Exploring ambient intelligence as the future developer interface",
         "url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-24"
       }
     ]
@@ -1418,85 +1453,127 @@
         "title": "Route and Orchestrate Models with GitHub Copilot Fusion",
         "description": "Intelligent model selection and orchestration in Copilot",
         "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "GPT-6.1 Terra in GitHub Copilot",
         "description": "OpenAI's newest model for agentic coding tasks",
         "url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Copilot Code Review: Max Review Effort and Approvals",
         "description": "Thorough automated code review with approval capabilities",
         "url": "https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "New Tools, Triggers, and Cost Controls for Automations",
         "description": "Expanded capabilities for Copilot Automations",
         "url": "https://github.blog/changelog/2026-10-28-new-tools-triggers-and-cost-controls-for-copilot-automations/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Build Shared Workflows for Your Team",
         "description": "Collaborative AI workflow automation for teams",
         "url": "https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "GitHub Copilot Assisted Permissions",
         "description": "Safety controls for Copilot agent permissions",
         "url": "https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Connect Your Tools to Copilot Without Setup",
         "description": "GitHub-verified MCP servers for easier integrations",
         "url": "https://github.blog/changelog/2026-10-28-connect-your-tools-to-copilot-without-all-the-setup/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Agent Merge Watches Pull Requests in the Cloud",
         "description": "Automatic PR fixing for failing workflows and conflicts",
         "url": "https://github.blog/changelog/2026-10-28-agent-merge-watches-and-fixes-pull-requests-in-the-cloud/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "GitHub Copilot Server-to-Server Authentication",
         "description": "Workload-owned identity for Copilot SDK services",
         "url": "https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Copilot Automations Learn from Outcomes",
         "description": "Self-improving AI automation workflows",
         "url": "https://github.blog/changelog/2026-10-28-copilot-automations-now-learn-from-outcomes-and-self-improve/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Generate and Edit Images Directly in Copilot",
         "description": "Image generation and editing with natural language",
         "url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
       },
       {
         "title": "Copilot Fusion Supports Selection of Local Models",
         "description": "Intelligent routing for on-device and cloud models",
         "url": "https://github.blog/changelog/2026-10-28-github-copilot-fusion-now-supports-selection-of-local-models/",
-        "isNew": true,
+        "isNew": false,
         "dateAdded": "2026-10-31"
+      },
+      {
+        "title": "Connect Supabase, Box, Calendly, and more to Copilot",
+        "description": "More GitHub-verified MCP connectors in public preview",
+        "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "GitHub Copilot weekly releases — November 9",
+        "description": "Weekly roundup of Copilot updates across surfaces",
+        "url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "GitHub Copilot weekly releases — November 2",
+        "description": "Weekly roundup of Copilot updates across surfaces",
+        "url": "https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "GitHub Copilot in Visual Studio — September update",
+        "description": "Copilot features shipped in the Visual Studio September update",
+        "url": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "Control where GitHub Copilot customizations come from",
+        "description": "Restrict agents, hooks and MCP servers sources by policy",
+        "url": "https://github.blog/changelog/2026-11-16-control-where-github-copilot-customizations-come-from/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
+      },
+      {
+        "title": "GitHub Copilot CLI adds Microsoft Entra sign-in",
+        "description": "Preview of Entra authentication for Copilot CLI",
+        "url": "https://github.blog/changelog/2026-11-17-github-copilot-cli-adds-microsoft-entra-sign-in-as-a-preview/",
+        "isNew": true,
+        "dateAdded": "2026-11-21"
       }
     ]
   },
